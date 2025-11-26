@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spaceflux Design System</title>
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/typography.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/showcase.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: var(--color-surface-dark);
+      color: var(--color-on-surface-dark);
+      font-family: var(--font-family-ibm-plex-sans);
+      padding: 0 3rem 3rem 3rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    section {
+      margin-bottom: 10rem;
+      scroll-margin-top: 6rem;
+    }
+    h2 {
+      color: var(--color-brand-medium-orchid);
+      margin-bottom: 2rem;
+      font-family: var(--font-family-nb-architekt);
+      font-size: var(--font-size-28);
+      text-transform: uppercase;
+      letter-spacing: var(--letter-spacing-neg-5);
+    }
+    h3 {
+      color: var(--color-grey-200);
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+      font-size: var(--font-size-16);
+      text-transform: uppercase;
+    }
+    h4 {
+      color: var(--color-on-surface-dark);
+      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+      font-size: var(--font-size-14);
+      font-weight: bold;
+      border-bottom: 1px solid var(--color-border-dark);
+      padding-bottom: 0.5rem;
+      width: fit-content;
+    }
+    .component-group {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      background: rgba(255,255,255,0.02);
+      padding: 2rem;
+      border-radius: 12px;
+    }
+    .component-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .component-label {
+      font-size: var(--font-size-10);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-grey-400);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="showcase-header">
+    <div class="logo-container">
+      <a href="#" title="Back to top">
+        <img src="assets/logos/logo.svg" alt="Spaceflux Logo">
+      </a>
+    </div>
+    <nav class="showcase-nav">
+      <a href="#colors">Colors</a>
+      <a href="#typography">Typography</a>
+      <a href="#components">Components</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="colors">
+      <h2>Colors</h2>
+      
+      <h3>Brand Primary</h3>
+      <div class="color-grid">
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-primary-100)"></div><div class="color-info"><span class="color-name">Primary 100</span><span class="color-hex">#e9e0fb</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-primary-200)"></div><div class="color-info"><span class="color-name">Primary 200</span><span class="color-hex">#c9b1f4</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-primary-300)"></div><div class="color-info"><span class="color-name">Primary 300</span><span class="color-hex">#ac80ed</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-primary-400)"></div><div class="color-info"><span class="color-name">Primary 400</span><span class="color-hex">#924ae4</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-primary-500)"></div><div class="color-info"><span class="color-name">Primary 500</span><span class="color-hex">#6b29ae</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-primary-600)"></div><div class="color-info"><span class="color-name">Primary 600</span><span class="color-hex">#41166d</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-primary-700)"></div><div class="color-info"><span class="color-name">Primary 700</span><span class="color-hex">#1a0531</span></div></div>
+      </div>
+
+      <h3>Brand Secondary</h3>
+      <div class="color-grid">
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-secondary-100)"></div><div class="color-info"><span class="color-name">Secondary 100</span><span class="color-hex">#ffecf2</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-secondary-300)"></div><div class="color-info"><span class="color-name">Secondary 300</span><span class="color-hex">#ff7eb6</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-secondary-500)"></div><div class="color-info"><span class="color-name">Secondary 500</span><span class="color-hex">#ba0070</span></div></div>
+      </div>
+
+      <h3>Named Brand Colors</h3>
+      <div class="color-grid">
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-brand-medium-orchid)"></div><div class="color-info"><span class="color-name">Medium Orchid</span><span class="color-hex">#CF8BFF</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-brand-deep-purple)"></div><div class="color-info"><span class="color-name">Deep Purple</span><span class="color-hex">#6B29AE</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-brand-china-pink)"></div><div class="color-info"><span class="color-name">China Pink</span><span class="color-hex">#D8749D</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-brand-grey-purple)"></div><div class="color-info"><span class="color-name">Grey Purple</span><span class="color-hex">#674A86</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-brand-han-blue)"></div><div class="color-info"><span class="color-name">Han Blue</span><span class="color-hex">#5865C6</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-brand-bright-blue)"></div><div class="color-info"><span class="color-name">Bright Blue</span><span class="color-hex">#1686E8</span></div></div>
+      </div>
+
+      <h3>UI Surfaces</h3>
+      <div class="color-grid">
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-surface-dark)"></div><div class="color-info"><span class="color-name">Dark</span><span class="color-hex">#100919</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-surface-dark-contrast)"></div><div class="color-info"><span class="color-name">Dark Contrast</span><span class="color-hex">#292134</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-surface-dark-progress)"></div><div class="color-info"><span class="color-name">Dark Progress</span><span class="color-hex">#312A39</span></div></div>
+      </div>
+
+      <h3>UI Borders</h3>
+      <div class="color-grid">
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-border-on-dark)"></div><div class="color-info"><span class="color-name">On Dark</span><span class="color-hex">#EEEEEE</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-border-on-dark-contrast)"></div><div class="color-info"><span class="color-name">On Dark Contrast</span><span class="color-hex">#36274A</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-border-on-dark-subtle)"></div><div class="color-info"><span class="color-name">On Dark Subtle</span><span class="color-hex">#1D1825</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-border-on-dark-disabled)"></div><div class="color-info"><span class="color-name">On Dark Disabled</span><span class="color-hex">#525252</span></div></div>
+      </div>
+
+      <h3>Semantic Colors</h3>
+      
+      <h4>Error</h4>
+      <div class="color-grid">
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-surface-error-dark)"></div><div class="color-info"><span class="color-name">Surface</span><span class="color-hex">#CF0019</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-on-surface-error-dark)"></div><div class="color-info"><span class="color-name">On Surface</span><span class="color-hex">#FF8594</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-border-error-dark)"></div><div class="color-info"><span class="color-name">Border</span><span class="color-hex">#7F000F</span></div></div>
+      </div>
+
+      <h4>Warning</h4>
+      <div class="color-grid">
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-surface-warning-dark)"></div><div class="color-info"><span class="color-name">Surface</span><span class="color-hex">#DCAA00</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-on-surface-warning-dark)"></div><div class="color-info"><span class="color-name">On Surface</span><span class="color-hex">#FFDB62</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-border-warning-dark)"></div><div class="color-info"><span class="color-name">Border</span><span class="color-hex">#654E00</span></div></div>
+      </div>
+
+      <h4>Success</h4>
+      <div class="color-grid">
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-surface-success-dark)"></div><div class="color-info"><span class="color-name">Surface</span><span class="color-hex">#00B55F</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-on-surface-success-dark)"></div><div class="color-info"><span class="color-name">On Surface</span><span class="color-hex">#B0FFB8</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-border-success-dark)"></div><div class="color-info"><span class="color-name">Border</span><span class="color-hex">#057023</span></div></div>
+      </div>
+
+      <h3>Data Visualization Palette</h3>
+      <div class="color-grid">
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-dataviz-1)"></div><div class="color-info"><span class="color-name">Dataviz 1</span><span class="color-hex">#8a3ffc</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-dataviz-2)"></div><div class="color-info"><span class="color-name">Dataviz 2</span><span class="color-hex">#5a3cd3</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-dataviz-3)"></div><div class="color-info"><span class="color-name">Dataviz 3</span><span class="color-hex">#4589ff</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-dataviz-4)"></div><div class="color-info"><span class="color-name">Dataviz 4</span><span class="color-hex">#ff7eb6</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-dataviz-5)"></div><div class="color-info"><span class="color-name">Dataviz 5</span><span class="color-hex">#fa4d56</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-dataviz-6)"></div><div class="color-info"><span class="color-name">Dataviz 6</span><span class="color-hex">#d12771</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-dataviz-7)"></div><div class="color-info"><span class="color-name">Dataviz 7</span><span class="color-hex">#76ff9a</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-dataviz-8)"></div><div class="color-info"><span class="color-name">Dataviz 8</span><span class="color-hex">#82ad00</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-dataviz-9)"></div><div class="color-info"><span class="color-name">Dataviz 9</span><span class="color-hex">#009d9a</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-dataviz-10)"></div><div class="color-info"><span class="color-name">Dataviz 10</span><span class="color-hex">#086e6b</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-dataviz-11)"></div><div class="color-info"><span class="color-name">Dataviz 11</span><span class="color-hex">#19fcf8</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-dataviz-12)"></div><div class="color-info"><span class="color-name">Dataviz 12</span><span class="color-hex">#0072c3</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-dataviz-13)"></div><div class="color-info"><span class="color-name">Dataviz 13</span><span class="color-hex">#b98c00</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-dataviz-14)"></div><div class="color-info"><span class="color-name">Dataviz 14</span><span class="color-hex">#ffe100</span></div></div>
+        <div class="color-swatch"><div class="color-preview" style="background: var(--color-dataviz-15)"></div><div class="color-info"><span class="color-name">Dataviz 15</span><span class="color-hex">#fddc69</span></div></div>
+      </div>
+    </section>
+
+    <section id="typography">
+      <h2>Typography</h2>
+      
+      <div class="typography-row">
+        <div class="typography-label">.text-display-large</div>
+        <div class="typography-example text-display-large">Spaceflux Optical Sensor</div>
+      </div>
+      
+      <div class="typography-row">
+        <div class="typography-label">.text-heading-large</div>
+        <div class="typography-example text-heading-large">Tracking Intelsat 33E</div>
+      </div>
+      
+      <div class="typography-row">
+        <div class="typography-label">.text-heading-medium</div>
+        <div class="typography-example text-heading-medium">Unique Capabilities</div>
+      </div>
+
+      <div class="typography-row">
+        <div class="typography-label">.text-overline-large</div>
+        <div class="typography-example text-overline-large">System Status</div>
+      </div>
+
+      <div class="typography-row">
+        <div class="typography-label">.text-overline-medium</div>
+        <div class="typography-example text-overline-medium">Active Monitoring</div>
+      </div>
+
+      <div class="typography-row">
+        <div class="typography-label">.text-body-large</div>
+        <div class="typography-example text-body-large">IS-33e was stationed at 60 degrees East longitude, serving Europe, Africa, and the Asia-Pacific region.</div>
+      </div>
+
+      <div class="typography-row">
+        <div class="typography-label">.text-body-small</div>
+        <div class="typography-example text-body-small">The satellite suffered a sudden power loss, leading to its fragmentation into dozens of pieces.</div>
+      </div>
+
+      <div class="typography-row">
+        <div class="typography-label">.text-link-large</div>
+        <a href="#" class="typography-example text-link-large">View Full Report</a>
+      </div>
+    </section>
+
+    <section id="components">
+      <h2>Components</h2>
+
+      <h3>Buttons</h3>
+      <div class="component-group">
+        <div class="component-wrapper">
+          <span class="component-label">Primary</span>
+          <button class="btn btn-primary">Primary Action</button>
+        </div>
+        <div class="component-wrapper">
+          <span class="component-label">Secondary</span>
+          <button class="btn btn-secondary">Secondary Action</button>
+        </div>
+        <div class="component-wrapper">
+          <span class="component-label">Ghost</span>
+          <button class="btn btn-ghost">Ghost Action</button>
+        </div>
+      </div>
+
+      <h3>Inputs</h3>
+      <div class="component-group">
+        <div class="component-wrapper" style="width: 300px;">
+          <span class="component-label">Default Input</span>
+          <input type="text" class="input-field" placeholder="Search satellites...">
+        </div>
+        <div class="component-wrapper" style="width: 300px;">
+          <span class="component-label">Focused State</span>
+          <input type="text" class="input-field" placeholder="Focused" style="border-color: var(--color-border-focus);">
+        </div>
+      </div>
+
+      <h3>Date Picker</h3>
+      <div class="component-group">
+        <div class="date-picker">
+          <div class="date-picker-header">
+            <div class="date-picker-title">Select Date</div>
+          </div>
+          <div class="date-picker-inputs">
+            <div class="date-picker-input-wrapper">
+              <span class="date-picker-input-text">20.09.2022</span>
+            </div>
+            <div class="date-picker-input-wrapper">
+              <span class="date-picker-input-text">MM.DD.YYYY</span>
+            </div>
+          </div>
+          
+          <div class="date-picker-controls">
+            <div class="date-picker-current-month">
+              <span>September 2022</span>
+              <span>▼</span>
+            </div>
+            <div>
+              <span style="margin-right: 10px; cursor: pointer;">&lt;</span>
+              <span style="cursor: pointer;">&gt;</span>
+            </div>
+          </div>
+
+          <div class="date-picker-grid">
+            <!-- Days Header -->
+            <div class="date-picker-day">S</div>
+            <div class="date-picker-day">M</div>
+            <div class="date-picker-day">T</div>
+            <div class="date-picker-day">W</div>
+            <div class="date-picker-day">T</div>
+            <div class="date-picker-day">F</div>
+            <div class="date-picker-day">S</div>
+
+            <!-- Days -->
+            <div class="date-picker-day" style="opacity: 0.3">28</div>
+            <div class="date-picker-day" style="opacity: 0.3">29</div>
+            <div class="date-picker-day" style="opacity: 0.3">30</div>
+            <div class="date-picker-day" style="opacity: 0.3">31</div>
+            <div class="date-picker-day">1</div>
+            <div class="date-picker-day">2</div>
+            <div class="date-picker-day">3</div>
+            <div class="date-picker-day">4</div>
+            <div class="date-picker-day">5</div>
+            <div class="date-picker-day">6</div>
+            <div class="date-picker-day">7</div>
+            <div class="date-picker-day">8</div>
+            <div class="date-picker-day">9</div>
+            <div class="date-picker-day">10</div>
+            <div class="date-picker-day">11</div>
+            <div class="date-picker-day">12</div>
+            <div class="date-picker-day">13</div>
+            <div class="date-picker-day">14</div>
+            <div class="date-picker-day">15</div>
+            <div class="date-picker-day">16</div>
+            <div class="date-picker-day">17</div>
+            <div class="date-picker-day">18</div>
+            <div class="date-picker-day">19</div>
+            <div class="date-picker-day selected">20</div>
+            <div class="date-picker-day">21</div>
+            <div class="date-picker-day">22</div>
+            <div class="date-picker-day">23</div>
+            <div class="date-picker-day">24</div>
+            <div class="date-picker-day">25</div>
+            <div class="date-picker-day">26</div>
+            <div class="date-picker-day">27</div>
+            <div class="date-picker-day">28</div>
+            <div class="date-picker-day">29</div>
+            <div class="date-picker-day">30</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Data Tables</h3>
+      <div class="component-group" style="display: block;">
+        <div class="component-wrapper" style="width: 100%; max-width: 800px;">
+          <div class="data-table">
+            <div class="data-table-header">
+               <span class="data-table-title">Weather Forecast</span>
+            </div>
+            <!-- Header Row -->
+            <div class="data-table-row">
+               <div class="data-table-cell">Metric</div>
+               <div class="data-table-cell">Now</div>
+               <div class="data-table-cell">+ 1hr</div>
+            </div>
+            <!-- Data Row 1 -->
+            <div class="data-table-row">
+               <div class="data-table-cell">Precipitation</div>
+               <div class="data-table-cell">0.30 mm</div>
+               <div class="data-table-cell alt">1.00 mm</div>
+            </div>
+            <!-- Data Row 2 -->
+            <div class="data-table-row">
+               <div class="data-table-cell">Humidity</div>
+               <div class="data-table-cell">7.38 g/m3</div>
+               <div class="data-table-cell alt">90%</div>
+            </div>
+            <!-- Data Row 3 -->
+             <div class="data-table-row">
+               <div class="data-table-cell">Cloud Cover</div>
+               <div class="data-table-cell">48%</div>
+               <div class="data-table-cell alt">68%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>
