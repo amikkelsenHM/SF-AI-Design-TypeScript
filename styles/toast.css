@@ -1,0 +1,49 @@
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background-color: var(--color-surface-dark-contrast);
+  color: var(--color-brand-medium-orchid);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border-on-dark-subtle);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  
+  /* Typography: .text-overline-medium */
+  font-family: var(--font-family-nb-architekt);
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-18);
+  text-transform: uppercase;
+  
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.toast-label {
+  color: var(--color-on-surface-dark);
+  margin-right: 0.5rem;
+}
+
+/* Interactive States */
+.color-swatch, .typography-row {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.color-swatch:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.typography-row:hover {
+  background-color: rgba(255,255,255,0.02);
+}

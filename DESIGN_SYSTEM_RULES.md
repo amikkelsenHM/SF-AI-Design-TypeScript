@@ -17,6 +17,7 @@ When creating new HTML pages or components, always include the CSS files in the 
 <link rel="stylesheet" href="styles/variables.css">
 <link rel="stylesheet" href="styles/typography.css">
 <link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/charts.css">
 ```
 
 ## 3. Naming Conventions & Usage
@@ -36,7 +37,7 @@ Use CSS variables for all colors. Do not hardcode hex values.
 *   **Borders:** `var(--color-border-dark)`, `var(--color-border-focus)`
 
 ### Components
-*   **Buttons:** Use `.btn` combined with `.btn-primary`, `.btn-secondary`, or `.btn-ghost`.
+*   **Buttons:** Use `.btn` combined with `.btn-primary`, `.btn-secondary`, or `.btn-tertiary`.
 *   **Inputs:** Use `.input-field` for text inputs. Wrap date picker inputs in `.date-picker-input-wrapper`.
 *   **Data Tables:**
     *   Container: `.data-table`
@@ -44,6 +45,11 @@ Use CSS variables for all colors. Do not hardcode hex values.
     *   Rows: `.data-table-row`
     *   Cells: `.data-table-cell` (add `.alt` for alternating/secondary styling)
 *   **Date Picker:** Follow the structure: `.date-picker` > `.date-picker-header` > `.date-picker-inputs` > `.date-picker-controls` > `.date-picker-grid`.
+*   **Charts:**
+    *   Container: `.chart-container`
+    *   Bar Chart: `.bar-chart` with `.bar-column` and `.bar-value`.
+    *   Line Chart: `.line-chart-wrapper` containing `.line-chart-svg`.
+    *   Donut Chart: `.donut-chart-container` > `.donut-chart` > `.donut-hole`.
 
 ## 4. Extension Rules
 *   If a new component is needed that does not exist in `reference_components.html`, try to compose it using existing primitives (CSS variables).
