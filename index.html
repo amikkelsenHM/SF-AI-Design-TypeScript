@@ -241,6 +241,48 @@
         </div>
       </div>
 
+      <h3>Tooltips</h3>
+      
+      <div class="component-group">
+        <!-- Static Examples -->
+        <div class="component-wrapper">
+          <span class="component-label">Static (With Title)</span>
+          <div class="tooltip-content" style="position: static; visibility: visible; opacity: 1; transform: none; margin: 0; pointer-events: auto;">
+              <div style="font-size: 16px; margin-bottom: 8px; font-weight: normal;">Popover title</div>
+              They had been at it for two days. Stony silences and rock-hard words. All over the number of throws and the placement of cushions.
+          </div>
+        </div>
+        
+        <div class="component-wrapper">
+          <span class="component-label">Static (Text Only)</span>
+           <div class="tooltip-content" style="position: static; visibility: visible; opacity: 1; transform: none; margin: 0; pointer-events: auto;">
+              A thirty-year journey from their childlike pillow fights as newlyweds. They shouldn’t have enjoyed it so much.
+            </div>
+        </div>
+
+        <!-- Interactive Examples -->
+        <div class="component-wrapper">
+          <span class="component-label">Hover Interaction</span>
+          <div class="tooltip-container">
+            <button class="btn btn-secondary">Hover me (with Title)</button>
+            <div class="tooltip-content">
+              <div style="font-size: 16px; margin-bottom: 8px; font-weight: normal;">Popover title</div>
+              They had been at it for two days. Stony silences and rock-hard words. All over the number of throws and the placement of cushions.
+            </div>
+          </div>
+        </div>
+        
+        <div class="component-wrapper">
+          <span class="component-label">Hover Interaction</span>
+          <div class="tooltip-container">
+            <button class="btn btn-secondary">Hover me (without Title)</button>
+            <div class="tooltip-content">
+              A thirty-year journey from their childlike pillow fights as newlyweds. They shouldn’t have enjoyed it so much.
+            </div>
+          </div>
+        </div>
+      </div>
+
       <h3>Inputs</h3>
       <div class="component-group">
         <div class="component-wrapper" style="width: 300px;">
@@ -330,36 +372,128 @@
 
       <h3>Data Tables</h3>
       <div class="component-group" style="display: block;">
-        <div class="component-wrapper" style="width: 100%; max-width: 800px;">
-          <div class="data-table">
-            <div class="data-table-header">
-               <span class="data-table-title">Weather Forecast</span>
+        <div class="component-wrapper" style="width: 100%; max-width: 1000px;">
+          
+          <div class="table-container">
+            <table class="table-v2">
+              <thead>
+                <tr>
+                  <th style="width: 40px;"><input type="checkbox" style="accent-color: var(--color-brand-medium-orchid);"></th>
+                  <th>Status</th>
+                  <th>Circle Status</th>
+                  <th>Email</th>
+                  <th>Amount</th>
+                  <th style="text-align: right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" style="accent-color: var(--color-brand-medium-orchid);"></td>
+                  <td>
+                    <div class="badge badge-success">
+                      <div class="badge-dot"></div>
+                      Success
+                    </div>
+                  </td>
+                  <td>
+                     <div class="badge badge-success" style="width: auto; padding: 0 6px; border-radius: 50%; height: 24px; width: 24px;">
+                        <div class="badge-dot" style="margin: 0;"></div>
+                     </div>
+                  </td>
+                  <td>ken99@yahoo.com</td>
+                  <td>$316.00</td>
+                  <td style="text-align: right;">
+                    <button class="btn btn-tertiary btn-icon-sm">•••</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" style="accent-color: var(--color-brand-medium-orchid);"></td>
+                  <td>
+                     <div class="badge badge-success">
+                      <div class="badge-dot"></div>
+                      Success
+                    </div>
+                  </td>
+                  <td>
+                     <div class="badge badge-success" style="width: auto; padding: 0 6px; border-radius: 50%; height: 24px; width: 24px;">
+                        <div class="badge-dot" style="margin: 0;"></div>
+                     </div>
+                  </td>
+                  <td>abe45@gmail.com</td>
+                  <td>$242.00</td>
+                  <td style="text-align: right;">
+                    <button class="btn btn-tertiary btn-icon-sm">•••</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" style="accent-color: var(--color-brand-medium-orchid);"></td>
+                  <td>
+                    <div class="badge badge-processing">
+                      <div class="badge-dot"></div>
+                      Processing
+                    </div>
+                  </td>
+                   <td>
+                     <div class="badge badge-processing" style="width: auto; padding: 0 6px; border-radius: 50%; height: 24px; width: 24px;">
+                        <div class="badge-dot" style="margin: 0;"></div>
+                     </div>
+                  </td>
+                  <td>monserrat44@gmail.com</td>
+                  <td>$837.00</td>
+                  <td style="text-align: right;">
+                    <button class="btn btn-tertiary btn-icon-sm">•••</button>
+                  </td>
+                </tr>
+                 <tr>
+                  <td><input type="checkbox" style="accent-color: var(--color-brand-medium-orchid);"></td>
+                  <td>
+                    <div class="badge badge-error">
+                      <div class="badge-dot"></div>
+                      Failed
+                    </div>
+                  </td>
+                   <td>
+                     <div class="badge badge-error" style="width: auto; padding: 0 6px; border-radius: 50%; height: 24px; width: 24px;">
+                        <div class="badge-dot" style="margin: 0;"></div>
+                     </div>
+                  </td>
+                  <td>silas22@gmail.com</td>
+                  <td>$874.00</td>
+                  <td style="text-align: right;">
+                    <button class="btn btn-tertiary btn-icon-sm">•••</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <!-- Table Footer / Pagination -->
+          <div class="table-footer">
+            <div class="rows-per-page">
+              <span>Rows per page</span>
+              <select class="rows-select">
+                <option>10</option>
+                <option>20</option>
+                <option>50</option>
+              </select>
             </div>
-            <!-- Header Row -->
-            <div class="data-table-row">
-               <div class="data-table-cell">Metric</div>
-               <div class="data-table-cell">Now</div>
-               <div class="data-table-cell">+ 1hr</div>
+            <div class="page-info">
+              1-20 of 1,203
             </div>
-            <!-- Data Row 1 -->
-            <div class="data-table-row">
-               <div class="data-table-cell">Precipitation</div>
-               <div class="data-table-cell">0.30 mm</div>
-               <div class="data-table-cell alt">1.00 mm</div>
-            </div>
-            <!-- Data Row 2 -->
-            <div class="data-table-row">
-               <div class="data-table-cell">Humidity</div>
-               <div class="data-table-cell">7.38 g/m3</div>
-               <div class="data-table-cell alt">90%</div>
-            </div>
-            <!-- Data Row 3 -->
-             <div class="data-table-row">
-               <div class="data-table-cell">Cloud Cover</div>
-               <div class="data-table-cell">48%</div>
-               <div class="data-table-cell alt">68%</div>
+            <div class="pagination-controls">
+              <button class="pagination-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 18L9 12L15 6" stroke="#EEEEEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="pagination-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#EEEEEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
             </div>
           </div>
+
         </div>
       </div>
 

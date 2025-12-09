@@ -7,7 +7,179 @@
   box-sizing: border-box;
 }
 
-/* --- Data Tables --- */
+/* --- Data Tables (V2 - Semantic HTML) --- */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid var(--color-border-on-dark-subtle);
+}
+
+.table-v2 {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-14);
+  text-align: left;
+}
+
+.table-v2 thead tr {
+  border-bottom: 1px solid var(--color-border-on-dark-subtle);
+  background-color: var(--color-surface-dark-contrast);
+}
+
+.table-v2 th {
+  height: 40px;
+  padding: 0 12px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-on-surface-dark);
+  vertical-align: middle;
+}
+
+.table-v2 tbody tr {
+  border-bottom: 1px solid var(--color-border-on-dark-subtle);
+  transition: background-color 0.2s;
+}
+
+.table-v2 tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table-v2 tbody tr:hover {
+  background-color: var(--color-surface-dark-progress);
+}
+
+.table-v2 td {
+  padding: 8px 12px;
+  vertical-align: middle;
+  color: #eeeeee;
+  height: 36px; /* Matches h-9 */
+  font-weight: 400; /* Ensure not bold */
+}
+
+/* --- Badges / Status Circles --- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 38px;
+  height: 24px;
+  padding: 0 12px;
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-12); /* text-sm/body-small */
+  line-height: 1;
+  white-space: nowrap;
+  gap: 6px;
+  border: 1px solid transparent;
+}
+
+.badge-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Badge Variants */
+/* Success */
+.badge-success {
+  background-color: rgba(0, 181, 95, 0.2);
+  border-color: var(--color-surface-success-dark); /* #00b55f */
+  color: var(--color-on-surface-success-dark); /* #b0ffb8 */
+}
+.badge-success .badge-dot {
+  background-color: var(--color-on-surface-success-dark);
+}
+
+/* Warning */
+.badge-warning {
+  background-color: rgba(220, 170, 0, 0.2);
+  border-color: var(--color-surface-warning-dark); /* #dcaa00 */
+  color: var(--color-on-surface-warning-dark); /* #ffdb62 */
+}
+.badge-warning .badge-dot {
+  background-color: var(--color-on-surface-warning-dark);
+}
+
+/* Error */
+.badge-error {
+  background-color: rgba(207, 0, 25, 0.2);
+  border-color: var(--color-surface-error-dark); /* #cf0019 */
+  color: var(--color-on-surface-error-dark); /* #ff8594 */
+}
+.badge-error .badge-dot {
+  background-color: var(--color-on-surface-error-dark);
+}
+
+/* Processing (Custom/Grey) */
+.badge-processing {
+  background-color: var(--color-surface-dark-progress); /* #312a39 */
+  border-color: var(--color-border-on-dark-subtle); /* #1d1825 */
+  color: var(--color-grey-300); /* #97959c */
+}
+.badge-processing .badge-dot {
+  background-color: var(--color-grey-300);
+}
+
+
+/* --- Table Pagination --- */
+.table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 12px 0;
+  gap: 16px;
+  color: var(--color-on-surface-dark);
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-12);
+}
+
+.rows-per-page {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rows-select {
+  background-color: var(--color-surface-dark-progress);
+  border: 1px solid var(--color-border-on-dark-subtle);
+  border-radius: 12px;
+  height: 32px;
+  padding: 0 12px;
+  color: var(--color-on-surface-dark);
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  appearance: none; /* simple arrow placeholder */
+  width: 60px;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L9 1" stroke="%23EEEEEE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 4px;
+}
+
+.pagination-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: var(--color-on-surface-dark);
+}
+
+.pagination-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Data Tables (Legacy) --- */
 .data-table {
   width: 100%;
   border-collapse: separate;
@@ -172,51 +344,145 @@
   border-color: var(--color-border-focus);
 }
 
-/* --- Buttons (Inferred/Placeholder) --- */
+/* --- Buttons --- */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 16px;
-  border-radius: 4px;
+  gap: 8px;
+  white-space: nowrap;
+  border-radius: 12px; /* rounded-xl */
   font-family: var(--font-family-ibm-plex-sans);
-  font-size: var(--font-size-14);
+  font-size: var(--font-size-12); /* text-xs */
   font-weight: var(--font-weight-medium);
+  line-height: 1;
   cursor: pointer;
-  transition: background-color 0.2s;
-  border: none;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  border: 2px solid transparent;
+  
+  /* Size: sm (default) */
+  height: 32px;
+  padding: 0 16px;
 }
 
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Variant: Primary */
 .btn-primary {
-  background-color: var(--color-primary-500);
+  background-color: var(--color-brand-deep-purple);
+  border-color: var(--color-brand-deep-purple);
   color: var(--color-on-surface-dark);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-400);
-  box-shadow: 0px 0px 8px 0px var(--color-primary-500);
+  border-color: var(--color-brand-medium-orchid);
 }
 
+.btn-primary:active {
+  background-color: var(--color-on-surface-dark-subtle);
+  border-color: var(--color-brand-deep-purple);
+}
+
+/* Variant: Secondary */
 .btn-secondary {
   background-color: transparent;
-  border: 1px solid var(--color-border-on-dark);
   color: var(--color-on-surface-dark);
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-on-surface-dark);
-  color: var(--color-surface-dark);
-  border-color: var(--color-on-surface-dark);
+  background-color: var(--color-surface-dark-progress);
 }
 
+.btn-secondary:active {
+  background-color: var(--color-on-surface-dark-subtle);
+}
+
+/* Variant: Tertiary */
 .btn-tertiary {
   background-color: transparent;
   color: var(--color-grey-300);
-  padding: 8px 12px;
 }
 
 .btn-tertiary:hover {
-  color: var(--color-on-surface-dark);
   background-color: var(--color-surface-dark-progress);
-  text-decoration: none;
+  color: var(--color-on-surface-dark);
+}
+
+.btn-tertiary:active {
+  background-color: var(--color-on-surface-dark-subtle);
+}
+
+/* Sizes */
+.btn-lg {
+  height: 44px;
+  padding: 0 16px;
+}
+
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+}
+
+.btn-icon-sm {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+/* --- Tooltips --- */
+.tooltip-container {
+  position: relative;
+  display: inline-flex;
+}
+
+.tooltip-content {
+  visibility: hidden;
+  opacity: 0;
+  /* Using the Popover background color from design */
+  background-color: var(--color-on-surface-dark-contrast);
+  color: var(--color-on-surface-dark);
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-12);
+  line-height: var(--line-height-17);
+  padding: 12px 16px; /* Reduced from 24px for a tooltip context, but larger than before */
+  border-radius: 2px; /* Matches design rounded-[2px] */
+  
+  /* Positioning */
+  position: absolute;
+  z-index: 50;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  margin-bottom: 8px;
+  white-space: normal; /* Allow wrapping */
+  width: max-content;
+  max-width: 250px;
+  text-align: left;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  
+  transition: all 0.2s ease-out;
+  pointer-events: none;
+}
+
+/* Arrow */
+.tooltip-content::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--color-on-surface-dark-contrast) transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip-content {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
 }
