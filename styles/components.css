@@ -57,6 +57,106 @@
   font-weight: 400; /* Ensure not bold */
 }
 
+/* --- Dropdowns / Selects --- */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  min-width: 200px;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 16px;
+  height: 36px; /* Size S default */
+  background-color: var(--color-surface-dark-progress);
+  border: 1px solid var(--color-border-on-dark-subtle);
+  border-radius: 12px;
+  color: var(--color-on-surface-dark);
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-12);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.dropdown-trigger:hover, .dropdown-trigger:focus {
+  border-color: var(--color-border-focus);
+  outline: none;
+}
+
+.dropdown-trigger.open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-color: var(--color-border-focus);
+}
+
+.dropdown-trigger.error {
+  border-color: var(--color-surface-error-dark);
+}
+
+.dropdown-trigger.success {
+  border-color: var(--color-surface-success-dark);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-surface-dark-progress);
+  border: 1px solid var(--color-border-focus);
+  border-top: none;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  overflow: hidden;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  padding: 4px 0;
+}
+
+.dropdown-menu.open {
+  display: flex;
+}
+
+.dropdown-item {
+  padding: 8px 16px;
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-12);
+  color: var(--color-on-surface-dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.1s;
+}
+
+.dropdown-item:hover {
+  background-color: var(--color-surface-dark-contrast);
+}
+
+.dropdown-item.selected {
+  background-color: var(--color-brand-deep-purple);
+  color: var(--color-on-surface-dark);
+}
+
+.dropdown-chevron {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L12 15L18 9" stroke="%23EEEEEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.dropdown-trigger.open .dropdown-chevron {
+  transform: rotate(180deg);
+}
+
 /* --- Badges / Status Circles --- */
 .badge {
   display: inline-flex;

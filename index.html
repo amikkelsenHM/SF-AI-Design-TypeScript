@@ -37,7 +37,7 @@
     h3 {
       color: var(--color-grey-200);
       margin-bottom: 1rem;
-      margin-top: 2rem;
+      margin-top: 4rem;
       font-size: var(--font-size-16);
       text-transform: uppercase;
     }
@@ -293,6 +293,74 @@
           <span class="component-label">Focused State</span>
           <input type="text" class="input-field" placeholder="Focused" style="border-color: var(--color-border-focus);">
         </div>
+      </div>
+
+      <h3>Dropdowns & Selects</h3>
+      <div class="component-group">
+        
+        <!-- Default State -->
+        <div class="component-wrapper">
+          <span class="component-label">Default</span>
+          <div class="dropdown-container">
+            <div class="dropdown-trigger" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+              <span>Select Option</span>
+              <div class="dropdown-chevron"></div>
+            </div>
+            <div class="dropdown-menu">
+              <div class="dropdown-item">Option 1</div>
+              <div class="dropdown-item">Option 2</div>
+              <div class="dropdown-item">Option 3</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Open State (Simulated) -->
+        <div class="component-wrapper">
+          <span class="component-label">Open State</span>
+          <div class="dropdown-container" style="margin-bottom: 120px;"> <!-- Margin for visual flow -->
+            <div class="dropdown-trigger open">
+              <span>Option 2</span>
+              <div class="dropdown-chevron"></div>
+            </div>
+            <div class="dropdown-menu open">
+              <div class="dropdown-item">Option 1</div>
+              <div class="dropdown-item selected">Option 2</div>
+              <div class="dropdown-item">Option 3</div>
+              <div class="dropdown-item">Option 4</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Error State -->
+        <div class="component-wrapper">
+          <span class="component-label">Error State</span>
+          <div class="dropdown-container">
+            <div class="dropdown-trigger error" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+              <span>Invalid Selection</span>
+              <div class="dropdown-chevron"></div>
+            </div>
+            <div class="dropdown-menu">
+              <div class="dropdown-item">Option 1</div>
+              <div class="dropdown-item">Option 2</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Success State -->
+        <div class="component-wrapper">
+          <span class="component-label">Success State</span>
+          <div class="dropdown-container">
+            <div class="dropdown-trigger success" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+              <span>Valid Selection</span>
+              <div class="dropdown-chevron"></div>
+            </div>
+            <div class="dropdown-menu">
+              <div class="dropdown-item">Option 1</div>
+              <div class="dropdown-item">Option 2</div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <h3>Date Picker</h3>
