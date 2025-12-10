@@ -114,22 +114,21 @@
       </div>
 
       <h3>Tooltips</h3>
-      
       <div class="component-group">
         <!-- Static Examples -->
         <div class="component-wrapper">
           <span class="component-label">Static (With Title)</span>
-          <div class="tooltip-content" style="position: static; visibility: visible; opacity: 1; transform: none; margin: 0; pointer-events: auto;">
-              <div style="font-size: 16px; margin-bottom: 8px; font-weight: normal;">Popover title</div>
-              They had been at it for two days. Stony silences and rock-hard words. All over the number of throws and the placement of cushions.
+          <div class="tooltip-content tooltip-static">
+            <div style="font-size: 16px; margin-bottom: 8px; font-weight: normal;">Popover title</div>
+            They had been at it for two days. Stony silences and rock-hard words. All over the number of throws and the placement of cushions.
           </div>
         </div>
         
         <div class="component-wrapper">
           <span class="component-label">Static (Text Only)</span>
-           <div class="tooltip-content" style="position: static; visibility: visible; opacity: 1; transform: none; margin: 0; pointer-events: auto;">
-              A thirty-year journey from their childlike pillow fights as newlyweds. They shouldn’t have enjoyed it so much.
-            </div>
+          <div class="tooltip-content tooltip-static">
+            A thirty-year journey from their childlike pillow fights as newlyweds. They shouldn't have enjoyed it so much.
+          </div>
         </div>
 
         <!-- Interactive Examples -->
@@ -149,7 +148,7 @@
           <div class="tooltip-container">
             <button class="btn btn-secondary">Hover me (without Title)</button>
             <div class="tooltip-content">
-              A thirty-year journey from their childlike pillow fights as newlyweds. They shouldn’t have enjoyed it so much.
+              A thirty-year journey from their childlike pillow fights as newlyweds. They shouldn't have enjoyed it so much.
             </div>
           </div>
         </div>
@@ -170,6 +169,49 @@
             <span class="breadcrumb-separator"></span>
             <span class="breadcrumb-link breadcrumb-current" aria-current="page">This is a link</span>
           </nav>
+        </div>
+      </div>
+
+      <h3>Checkboxes & Radio Buttons</h3>
+      <div class="component-group" style="display: block;">
+        <!-- Checkboxes Row -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem; margin-bottom: 3rem;">
+          <div class="component-wrapper">
+            <span class="component-label">Checkbox Unselected</span>
+            <input type="checkbox" class="checkbox-input">
+          </div>
+          <div class="component-wrapper">
+            <span class="component-label">Checkbox Selected</span>
+            <input type="checkbox" class="checkbox-input" checked>
+          </div>
+          <div class="component-wrapper">
+            <span class="component-label">Checkbox Disabled</span>
+            <input type="checkbox" class="checkbox-input" disabled>
+          </div>
+          <div class="component-wrapper">
+            <span class="component-label">Checkbox Disabled Selected</span>
+            <input type="checkbox" class="checkbox-input" checked disabled>
+          </div>
+        </div>
+        
+        <!-- Radio Buttons Row -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem;">
+          <div class="component-wrapper">
+            <span class="component-label">Radio Unselected</span>
+            <input type="radio" name="radio-demo-1" class="radio-input">
+          </div>
+          <div class="component-wrapper">
+            <span class="component-label">Radio Selected</span>
+            <input type="radio" name="radio-demo-1" class="radio-input" checked>
+          </div>
+          <div class="component-wrapper">
+            <span class="component-label">Radio Disabled</span>
+            <input type="radio" name="radio-demo-2" class="radio-input" disabled>
+          </div>
+          <div class="component-wrapper">
+            <span class="component-label">Radio Disabled Selected</span>
+            <input type="radio" name="radio-demo-2" class="radio-input" checked disabled>
+          </div>
         </div>
       </div>
 

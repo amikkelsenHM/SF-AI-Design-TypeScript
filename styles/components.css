@@ -604,6 +604,20 @@
   transform: translateX(-50%) translateY(-4px);
 }
 
+/* Static Tooltip - for showcase purposes */
+.tooltip-static {
+  position: static;
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+  margin: 0;
+  pointer-events: auto;
+}
+
+.tooltip-static::after {
+  display: none;
+}
+
 /* Icon Showcase */
 .icon-grid {
   display: grid;
@@ -685,4 +699,104 @@
   height: 18px;
   background-color: var(--color-surface-dark-progress);
   flex-shrink: 0;
+}
+
+/* --- Checkboxes --- */
+.checkbox-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--color-on-surface-dark);
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.checkbox-input:hover {
+  background-color: rgba(207, 139, 255, 0.1);
+}
+
+.checkbox-input:focus {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.checkbox-input:checked {
+  background-color: var(--color-brand-medium-orchid);
+  border-color: var(--color-brand-medium-orchid);
+}
+
+.checkbox-input:checked::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid #FFFFFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-input:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  border-color: var(--color-on-surface-dark-disabled);
+}
+
+.checkbox-input:disabled:checked {
+  background-color: var(--color-on-surface-dark-disabled);
+  border-color: var(--color-on-surface-dark-disabled);
+}
+
+/* --- Radio Buttons --- */
+.radio-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--color-on-surface-dark);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.radio-input:hover {
+  background-color: rgba(207, 139, 255, 0.1);
+}
+
+.radio-input:focus {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.radio-input:checked {
+  border-color: var(--color-brand-medium-orchid);
+}
+
+.radio-input:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-brand-medium-orchid);
+}
+
+.radio-input:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  border-color: var(--color-on-surface-dark-disabled);
+}
+
+.radio-input:disabled:checked::after {
+  background-color: var(--color-on-surface-dark-disabled);
 }
