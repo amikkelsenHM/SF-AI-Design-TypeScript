@@ -99,478 +99,9 @@
     <section id="components">
       <h2>Components</h2>
 
-      <h3>Buttons</h3>
-      <div class="component-group">
-        <div class="component-wrapper">
-          <span class="component-label">Primary</span>
-          <button class="btn btn-primary">Primary Action</button>
-        </div>
-        <div class="component-wrapper">
-          <span class="component-label">Secondary</span>
-          <button class="btn btn-secondary">Secondary Action</button>
-        </div>
-        <div class="component-wrapper">
-          <span class="component-label">Tertiary</span>
-          <button class="btn btn-tertiary">Tertiary Action</button>
-        </div>
-        <div class="component-wrapper">
-          <span class="component-label">Text Link</span>
-          <a href="#" class="text-link">Text link</a>
-        </div>
-      </div>
-
-      <h3>Tooltips</h3>
-      <div class="component-group">
-        <!-- Static Examples -->
-        <div class="component-wrapper">
-          <span class="component-label">Static (With Title)</span>
-          <div class="tooltip-content tooltip-static">
-            <div style="font-size: 16px; margin-bottom: 8px; font-weight: normal;">Popover title</div>
-            They had been at it for two days. Stony silences and rock-hard words. All over the number of throws and the placement of cushions.
-          </div>
-        </div>
-        
-        <div class="component-wrapper">
-          <span class="component-label">Static (Text Only)</span>
-          <div class="tooltip-content tooltip-static">
-            A thirty-year journey from their childlike pillow fights as newlyweds. They shouldn't have enjoyed it so much.
-          </div>
-        </div>
-
-        <!-- Interactive Examples -->
-        <div class="component-wrapper">
-          <span class="component-label">Hover Interaction</span>
-          <div class="tooltip-container">
-            <button class="btn btn-secondary">Hover me (with Title)</button>
-            <div class="tooltip-content">
-              <div style="font-size: 16px; margin-bottom: 8px; font-weight: normal;">Popover title</div>
-              They had been at it for two days. Stony silences and rock-hard words. All over the number of throws and the placement of cushions.
-            </div>
-          </div>
-        </div>
-        
-        <div class="component-wrapper">
-          <span class="component-label">Hover Interaction</span>
-          <div class="tooltip-container">
-            <button class="btn btn-secondary">Hover me (without Title)</button>
-            <div class="tooltip-content">
-              A thirty-year journey from their childlike pillow fights as newlyweds. They shouldn't have enjoyed it so much.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <h3>Breadcrumbs</h3>
-      <div class="component-group">
-        <div class="component-wrapper">
-          <span class="component-label">With Current Page</span>
-          <nav class="breadcrumb" aria-label="Breadcrumb">
-            <a href="#" class="breadcrumb-link">This is a link</a>
-            <span class="breadcrumb-separator"></span>
-            <a href="#" class="breadcrumb-link">This is a link</a>
-            <span class="breadcrumb-separator"></span>
-            <a href="#" class="breadcrumb-link">This is a link</a>
-            <span class="breadcrumb-separator"></span>
-            <a href="#" class="breadcrumb-link">This is a link</a>
-            <span class="breadcrumb-separator"></span>
-            <span class="breadcrumb-link breadcrumb-current" aria-current="page">This is a link</span>
-          </nav>
-        </div>
-      </div>
-
-      <h3>Checkboxes & Radio Buttons</h3>
-      <div class="component-group" style="display: block;">
-        <!-- Checkboxes Row -->
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem; margin-bottom: 3rem;">
-          <div class="component-wrapper">
-            <span class="component-label">Checkbox Unselected</span>
-            <input type="checkbox" class="checkbox-input">
-          </div>
-          <div class="component-wrapper">
-            <span class="component-label">Checkbox Selected</span>
-            <input type="checkbox" class="checkbox-input" checked>
-          </div>
-          <div class="component-wrapper">
-            <span class="component-label">Checkbox Disabled</span>
-            <input type="checkbox" class="checkbox-input" disabled>
-          </div>
-          <div class="component-wrapper">
-            <span class="component-label">Checkbox Disabled Selected</span>
-            <input type="checkbox" class="checkbox-input" checked disabled>
-          </div>
-        </div>
-        
-        <!-- Radio Buttons Row -->
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem;">
-          <div class="component-wrapper">
-            <span class="component-label">Radio Unselected</span>
-            <input type="radio" name="radio-demo-1" class="radio-input">
-          </div>
-          <div class="component-wrapper">
-            <span class="component-label">Radio Selected</span>
-            <input type="radio" name="radio-demo-1" class="radio-input" checked>
-          </div>
-          <div class="component-wrapper">
-            <span class="component-label">Radio Disabled</span>
-            <input type="radio" name="radio-demo-2" class="radio-input" disabled>
-          </div>
-          <div class="component-wrapper">
-            <span class="component-label">Radio Disabled Selected</span>
-            <input type="radio" name="radio-demo-2" class="radio-input" checked disabled>
-          </div>
-        </div>
-      </div>
-
-      <h3>Inputs</h3>
-      <div class="component-group">
-        <div class="component-wrapper" style="width: 300px;">
-          <span class="component-label">Default Input</span>
-          <input type="text" class="input-field" placeholder="Search satellites...">
-        </div>
-        <div class="component-wrapper" style="width: 300px;">
-          <span class="component-label">Focused State</span>
-          <input type="text" class="input-field" placeholder="Focused" style="border-color: var(--color-border-focus);">
-        </div>
-      </div>
-
-      <h3>Dropdowns & Selects</h3>
-      <div class="component-group">
-        
-        <!-- Default State -->
-        <div class="component-wrapper">
-          <span class="component-label">Default</span>
-          <div class="dropdown-container">
-            <div class="dropdown-trigger" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-              <span>Select Option</span>
-              <div class="dropdown-chevron"></div>
-            </div>
-            <div class="dropdown-menu">
-              <div class="dropdown-item">Option 1</div>
-              <div class="dropdown-item">Option 2</div>
-              <div class="dropdown-item">Option 3</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Open State (Simulated) -->
-        <div class="component-wrapper">
-          <span class="component-label">Open State</span>
-          <div class="dropdown-container" style="margin-bottom: 120px;"> <!-- Margin for visual flow -->
-            <div class="dropdown-trigger open">
-              <span>Option 2</span>
-              <div class="dropdown-chevron"></div>
-            </div>
-            <div class="dropdown-menu open">
-              <div class="dropdown-item">Option 1</div>
-              <div class="dropdown-item selected">Option 2</div>
-              <div class="dropdown-item">Option 3</div>
-              <div class="dropdown-item">Option 4</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Error State -->
-        <div class="component-wrapper">
-          <span class="component-label">Error State</span>
-          <div class="dropdown-container">
-            <div class="dropdown-trigger error" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-              <span>Invalid Selection</span>
-              <div class="dropdown-chevron"></div>
-            </div>
-            <div class="dropdown-menu">
-              <div class="dropdown-item">Option 1</div>
-              <div class="dropdown-item">Option 2</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Success State -->
-        <div class="component-wrapper">
-          <span class="component-label">Success State</span>
-          <div class="dropdown-container">
-            <div class="dropdown-trigger success" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-              <span>Valid Selection</span>
-              <div class="dropdown-chevron"></div>
-            </div>
-            <div class="dropdown-menu">
-              <div class="dropdown-item">Option 1</div>
-              <div class="dropdown-item">Option 2</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <h3>Date Picker</h3>
-      <div class="component-group">
-        <div class="date-picker">
-          <div class="date-picker-header">
-            <div class="date-picker-title">Select Date</div>
-          </div>
-          <div class="date-picker-inputs">
-            <div class="date-picker-input-wrapper">
-              <span class="date-picker-input-text">20.09.2022</span>
-            </div>
-            <div class="date-picker-input-wrapper">
-              <span class="date-picker-input-text">MM.DD.YYYY</span>
-            </div>
-          </div>
-          
-          <div class="date-picker-controls">
-            <div class="date-picker-current-month">
-              <span>September 2022</span>
-              <span>▼</span>
-            </div>
-            <div>
-              <span style="margin-right: 10px; cursor: pointer;">&lt;</span>
-              <span style="cursor: pointer;">&gt;</span>
-            </div>
-          </div>
-
-          <div class="date-picker-grid">
-            <!-- Days Header -->
-            <div class="date-picker-day">S</div>
-            <div class="date-picker-day">M</div>
-            <div class="date-picker-day">T</div>
-            <div class="date-picker-day">W</div>
-            <div class="date-picker-day">T</div>
-            <div class="date-picker-day">F</div>
-            <div class="date-picker-day">S</div>
-
-            <!-- Days -->
-            <div class="date-picker-day" style="opacity: 0.3">28</div>
-            <div class="date-picker-day" style="opacity: 0.3">29</div>
-            <div class="date-picker-day" style="opacity: 0.3">30</div>
-            <div class="date-picker-day" style="opacity: 0.3">31</div>
-            <div class="date-picker-day">1</div>
-            <div class="date-picker-day">2</div>
-            <div class="date-picker-day">3</div>
-            <div class="date-picker-day">4</div>
-            <div class="date-picker-day">5</div>
-            <div class="date-picker-day">6</div>
-            <div class="date-picker-day">7</div>
-            <div class="date-picker-day">8</div>
-            <div class="date-picker-day">9</div>
-            <div class="date-picker-day">10</div>
-            <div class="date-picker-day">11</div>
-            <div class="date-picker-day">12</div>
-            <div class="date-picker-day">13</div>
-            <div class="date-picker-day">14</div>
-            <div class="date-picker-day">15</div>
-            <div class="date-picker-day">16</div>
-            <div class="date-picker-day">17</div>
-            <div class="date-picker-day">18</div>
-            <div class="date-picker-day">19</div>
-            <div class="date-picker-day selected">20</div>
-            <div class="date-picker-day">21</div>
-            <div class="date-picker-day">22</div>
-            <div class="date-picker-day">23</div>
-            <div class="date-picker-day">24</div>
-            <div class="date-picker-day">25</div>
-            <div class="date-picker-day">26</div>
-            <div class="date-picker-day">27</div>
-            <div class="date-picker-day">28</div>
-            <div class="date-picker-day">29</div>
-            <div class="date-picker-day">30</div>
-          </div>
-        </div>
-      </div>
-
-      <h3>Data Tables</h3>
-      <div class="component-group" style="display: block;">
-        <div class="component-wrapper" style="width: 100%;">
-          
-          <div class="table-container">
-            <table class="table-v2">
-              <thead>
-                <tr>
-                  <th style="width: 40px;"><input type="checkbox" style="accent-color: var(--color-brand-medium-orchid);"></th>
-                  <th>Status</th>
-                  <th>Circle Status</th>
-                  <th>Email</th>
-                  <th>Amount</th>
-                  <th style="text-align: right;">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input type="checkbox" style="accent-color: var(--color-brand-medium-orchid);"></td>
-                  <td>
-                    <div class="badge badge-success">
-                      <div class="badge-dot"></div>
-                      Success
-                    </div>
-                  </td>
-                  <td>
-                     <div class="badge badge-success" style="width: auto; padding: 0 6px; border-radius: 50%; height: 24px; width: 24px;">
-                        <div class="badge-dot" style="margin: 0;"></div>
-                     </div>
-                  </td>
-                  <td>ken99@yahoo.com</td>
-                  <td>$316.00</td>
-                  <td style="text-align: right;">
-                    <button class="btn btn-tertiary btn-icon-sm">•••</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" style="accent-color: var(--color-brand-medium-orchid);"></td>
-                  <td>
-                     <div class="badge badge-success">
-                      <div class="badge-dot"></div>
-                      Success
-                    </div>
-                  </td>
-                  <td>
-                     <div class="badge badge-success" style="width: auto; padding: 0 6px; border-radius: 50%; height: 24px; width: 24px;">
-                        <div class="badge-dot" style="margin: 0;"></div>
-                     </div>
-                  </td>
-                  <td>abe45@gmail.com</td>
-                  <td>$242.00</td>
-                  <td style="text-align: right;">
-                    <button class="btn btn-tertiary btn-icon-sm">•••</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox" style="accent-color: var(--color-brand-medium-orchid);"></td>
-                  <td>
-                    <div class="badge badge-processing">
-                      <div class="badge-dot"></div>
-                      Processing
-                    </div>
-                  </td>
-                   <td>
-                     <div class="badge badge-processing" style="width: auto; padding: 0 6px; border-radius: 50%; height: 24px; width: 24px;">
-                        <div class="badge-dot" style="margin: 0;"></div>
-                     </div>
-                  </td>
-                  <td>monserrat44@gmail.com</td>
-                  <td>$837.00</td>
-                  <td style="text-align: right;">
-                    <button class="btn btn-tertiary btn-icon-sm">•••</button>
-                  </td>
-                </tr>
-                 <tr>
-                  <td><input type="checkbox" style="accent-color: var(--color-brand-medium-orchid);"></td>
-                  <td>
-                    <div class="badge badge-error">
-                      <div class="badge-dot"></div>
-                      Failed
-                    </div>
-                  </td>
-                   <td>
-                     <div class="badge badge-error" style="width: auto; padding: 0 6px; border-radius: 50%; height: 24px; width: 24px;">
-                        <div class="badge-dot" style="margin: 0;"></div>
-                     </div>
-                  </td>
-                  <td>silas22@gmail.com</td>
-                  <td>$874.00</td>
-                  <td style="text-align: right;">
-                    <button class="btn btn-tertiary btn-icon-sm">•••</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          
-          <!-- Table Footer / Pagination -->
-          <div class="table-footer">
-            <div class="rows-per-page">
-              <span>Rows per page</span>
-              <select class="rows-select">
-                <option>10</option>
-                <option>20</option>
-                <option>50</option>
-              </select>
-            </div>
-            <div class="page-info">
-              1-20 of 1,203
-            </div>
-            <div class="pagination-controls">
-              <button class="pagination-btn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 18L9 12L15 6" stroke="#EEEEEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </button>
-              <button class="pagination-btn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 18L15 12L9 6" stroke="#EEEEEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
       <h3>Charts & Data Visualization</h3>
       <div class="component-group" style="display: block;">
         <div class="component-wrapper">
-          <span class="component-label">Foundational Chart Module</span>
-          
-          <div class="chart-base">
-            <div class="chart-header">
-              <div class="chart-header-title">Data Overview</div>
-              <div class="chart-header-actions">
-                <!-- Actions placeholder -->
-              </div>
-            </div>
-
-            <div class="chart-layout-container">
-              <div class="chart-layout">
-                <!-- Y Axis Label & Scale -->
-                <div class="chart-y-label-container">
-                  <span class="chart-axis-label y-axis">VALUE</span>
-                  <div class="chart-y-axis">
-                    <span>100</span>
-                    <span>80</span>
-                    <span>60</span>
-                    <span>40</span>
-                    <span>20</span>
-                    <span>0</span>
-                  </div>
-                </div>
-
-                <!-- Plot Area -->
-                <div class="chart-plot-area">
-                  <!-- Horizontal Grid Lines -->
-                  <div class="chart-grid-line" style="top: 0%;"></div>
-                  <div class="chart-grid-line dashed" style="top: 20%;"></div>
-                  <div class="chart-grid-line dashed" style="top: 40%;"></div>
-                  <div class="chart-grid-line dashed" style="top: 60%;"></div>
-                  <div class="chart-grid-line dashed" style="top: 80%;"></div>
-                  <div class="chart-grid-line" style="bottom: 0;"></div>
-
-                  <!-- Vertical Grid Lines -->
-                  <div class="chart-grid-vertical" style="left: 0%;"></div>
-                  <div class="chart-grid-vertical" style="left: 16.66%;"></div>
-                  <div class="chart-grid-vertical" style="left: 33.33%;"></div>
-                  <div class="chart-grid-vertical" style="left: 50%;"></div>
-                  <div class="chart-grid-vertical" style="left: 66.66%;"></div>
-                  <div class="chart-grid-vertical" style="left: 83.33%;"></div>
-                  <div class="chart-grid-vertical" style="left: 100%; border-left-style: solid;"></div>
-                </div>
-              </div>
-
-              <!-- X Axis Label & Scale -->
-              <div class="chart-x-axis-container">
-                <div class="chart-x-axis">
-                  <span>12:00</span>
-                  <span>13:00</span>
-                  <span>14:00</span>
-                  <span>15:00</span>
-                  <span>16:00</span>
-                  <span>17:00</span>
-                  <span>18:00</span>
-                </div>
-                <div class="chart-axis-label x-axis">TIME</div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="component-wrapper" style="margin-top: 2rem;">
           <span class="component-label">Bar Chart with Data</span>
           
           <div class="chart-base">
@@ -972,8 +503,476 @@
           </div>
 
         </div>
+
+        <div class="component-wrapper" style="margin-top: 2rem;">
+          <span class="component-label">Foundational Chart Module</span>
+          
+          <div class="chart-base">
+            <div class="chart-header">
+              <div class="chart-header-title">Data Overview</div>
+              <div class="chart-header-actions">
+                <!-- Actions placeholder -->
+              </div>
+            </div>
+
+            <div class="chart-layout-container">
+              <div class="chart-layout">
+                <!-- Y Axis Label & Scale -->
+                <div class="chart-y-label-container">
+                  <span class="chart-axis-label y-axis">VALUE</span>
+                  <div class="chart-y-axis">
+                    <span>100</span>
+                    <span>80</span>
+                    <span>60</span>
+                    <span>40</span>
+                    <span>20</span>
+                    <span>0</span>
+                  </div>
+                </div>
+
+                <!-- Plot Area -->
+                <div class="chart-plot-area">
+                  <!-- Horizontal Grid Lines -->
+                  <div class="chart-grid-line" style="top: 0%;"></div>
+                  <div class="chart-grid-line dashed" style="top: 20%;"></div>
+                  <div class="chart-grid-line dashed" style="top: 40%;"></div>
+                  <div class="chart-grid-line dashed" style="top: 60%;"></div>
+                  <div class="chart-grid-line dashed" style="top: 80%;"></div>
+                  <div class="chart-grid-line" style="bottom: 0;"></div>
+
+                  <!-- Vertical Grid Lines -->
+                  <div class="chart-grid-vertical" style="left: 0%;"></div>
+                  <div class="chart-grid-vertical" style="left: 16.66%;"></div>
+                  <div class="chart-grid-vertical" style="left: 33.33%;"></div>
+                  <div class="chart-grid-vertical" style="left: 50%;"></div>
+                  <div class="chart-grid-vertical" style="left: 66.66%;"></div>
+                  <div class="chart-grid-vertical" style="left: 83.33%;"></div>
+                  <div class="chart-grid-vertical" style="left: 100%; border-left-style: solid;"></div>
+                </div>
+              </div>
+
+              <!-- X Axis Label & Scale -->
+              <div class="chart-x-axis-container">
+                <div class="chart-x-axis">
+                  <span>12:00</span>
+                  <span>13:00</span>
+                  <span>14:00</span>
+                  <span>15:00</span>
+                  <span>16:00</span>
+                  <span>17:00</span>
+                  <span>18:00</span>
+                </div>
+                <div class="chart-axis-label x-axis">TIME</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
+      <h3>Data Tables</h3>
+      <div class="component-group" style="display: block;">
+        <div class="component-wrapper" style="width: 100%;">
+          
+          <div class="table-container">
+            <table class="table-v2">
+              <thead>
+                <tr>
+                  <th style="width: 40px;"><input type="checkbox" style="accent-color: var(--color-brand-medium-orchid);"></th>
+                  <th>Status</th>
+                  <th>Circle Status</th>
+                  <th>Email</th>
+                  <th>Amount</th>
+                  <th style="text-align: right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" style="accent-color: var(--color-brand-medium-orchid);"></td>
+                  <td>
+                    <div class="badge badge-success">
+                      <div class="badge-dot"></div>
+                      Success
+                    </div>
+                  </td>
+                  <td>
+                     <div class="badge badge-success" style="width: auto; padding: 0 6px; border-radius: 50%; height: 24px; width: 24px;">
+                        <div class="badge-dot" style="margin: 0;"></div>
+                     </div>
+                  </td>
+                  <td>ken99@yahoo.com</td>
+                  <td>$316.00</td>
+                  <td style="text-align: right;">
+                    <button class="btn btn-tertiary btn-icon-sm">•••</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" style="accent-color: var(--color-brand-medium-orchid);"></td>
+                  <td>
+                     <div class="badge badge-success">
+                      <div class="badge-dot"></div>
+                      Success
+                    </div>
+                  </td>
+                  <td>
+                     <div class="badge badge-success" style="width: auto; padding: 0 6px; border-radius: 50%; height: 24px; width: 24px;">
+                        <div class="badge-dot" style="margin: 0;"></div>
+                     </div>
+                  </td>
+                  <td>abe45@gmail.com</td>
+                  <td>$242.00</td>
+                  <td style="text-align: right;">
+                    <button class="btn btn-tertiary btn-icon-sm">•••</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" style="accent-color: var(--color-brand-medium-orchid);"></td>
+                  <td>
+                    <div class="badge badge-processing">
+                      <div class="badge-dot"></div>
+                      Processing
+                    </div>
+                  </td>
+                   <td>
+                     <div class="badge badge-processing" style="width: auto; padding: 0 6px; border-radius: 50%; height: 24px; width: 24px;">
+                        <div class="badge-dot" style="margin: 0;"></div>
+                     </div>
+                  </td>
+                  <td>monserrat44@gmail.com</td>
+                  <td>$837.00</td>
+                  <td style="text-align: right;">
+                    <button class="btn btn-tertiary btn-icon-sm">•••</button>
+                  </td>
+                </tr>
+                 <tr>
+                  <td><input type="checkbox" style="accent-color: var(--color-brand-medium-orchid);"></td>
+                  <td>
+                    <div class="badge badge-error">
+                      <div class="badge-dot"></div>
+                      Failed
+                    </div>
+                  </td>
+                   <td>
+                     <div class="badge badge-error" style="width: auto; padding: 0 6px; border-radius: 50%; height: 24px; width: 24px;">
+                        <div class="badge-dot" style="margin: 0;"></div>
+                     </div>
+                  </td>
+                  <td>silas22@gmail.com</td>
+                  <td>$874.00</td>
+                  <td style="text-align: right;">
+                    <button class="btn btn-tertiary btn-icon-sm">•••</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <!-- Table Footer / Pagination -->
+          <div class="table-footer">
+            <div class="rows-per-page">
+              <span>Rows per page</span>
+              <select class="rows-select">
+                <option>10</option>
+                <option>20</option>
+                <option>50</option>
+              </select>
+            </div>
+            <div class="page-info">
+              1-20 of 1,203
+            </div>
+            <div class="pagination-controls">
+              <button class="pagination-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 18L9 12L15 6" stroke="#EEEEEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button class="pagination-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#EEEEEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <h3>Date Picker</h3>
+      <div class="component-group">
+        <div class="date-picker">
+          <div class="date-picker-header">
+            <div class="date-picker-title">Select Date</div>
+          </div>
+          <div class="date-picker-inputs">
+            <div class="date-picker-input-wrapper">
+              <span class="date-picker-input-text">20.09.2022</span>
+            </div>
+            <div class="date-picker-input-wrapper">
+              <span class="date-picker-input-text">MM.DD.YYYY</span>
+            </div>
+          </div>
+          
+          <div class="date-picker-controls">
+            <div class="date-picker-current-month">
+              <span>September 2022</span>
+              <span>▼</span>
+            </div>
+            <div>
+              <span style="margin-right: 10px; cursor: pointer;">&lt;</span>
+              <span style="cursor: pointer;">&gt;</span>
+            </div>
+          </div>
+
+          <div class="date-picker-grid">
+            <!-- Days Header -->
+            <div class="date-picker-day">S</div>
+            <div class="date-picker-day">M</div>
+            <div class="date-picker-day">T</div>
+            <div class="date-picker-day">W</div>
+            <div class="date-picker-day">T</div>
+            <div class="date-picker-day">F</div>
+            <div class="date-picker-day">S</div>
+
+            <!-- Days -->
+            <div class="date-picker-day" style="opacity: 0.3">28</div>
+            <div class="date-picker-day" style="opacity: 0.3">29</div>
+            <div class="date-picker-day" style="opacity: 0.3">30</div>
+            <div class="date-picker-day" style="opacity: 0.3">31</div>
+            <div class="date-picker-day">1</div>
+            <div class="date-picker-day">2</div>
+            <div class="date-picker-day">3</div>
+            <div class="date-picker-day">4</div>
+            <div class="date-picker-day">5</div>
+            <div class="date-picker-day">6</div>
+            <div class="date-picker-day">7</div>
+            <div class="date-picker-day">8</div>
+            <div class="date-picker-day">9</div>
+            <div class="date-picker-day">10</div>
+            <div class="date-picker-day">11</div>
+            <div class="date-picker-day">12</div>
+            <div class="date-picker-day">13</div>
+            <div class="date-picker-day">14</div>
+            <div class="date-picker-day">15</div>
+            <div class="date-picker-day">16</div>
+            <div class="date-picker-day">17</div>
+            <div class="date-picker-day">18</div>
+            <div class="date-picker-day">19</div>
+            <div class="date-picker-day selected">20</div>
+            <div class="date-picker-day">21</div>
+            <div class="date-picker-day">22</div>
+            <div class="date-picker-day">23</div>
+            <div class="date-picker-day">24</div>
+            <div class="date-picker-day">25</div>
+            <div class="date-picker-day">26</div>
+            <div class="date-picker-day">27</div>
+            <div class="date-picker-day">28</div>
+            <div class="date-picker-day">29</div>
+            <div class="date-picker-day">30</div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Dropdowns & Selects</h3>
+      <div class="component-group">
+        
+        <!-- Default State -->
+        <div class="component-wrapper">
+          <span class="component-label">Default</span>
+          <div class="dropdown-container">
+            <div class="dropdown-trigger" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+              <span>Select Option</span>
+              <div class="dropdown-chevron"></div>
+            </div>
+            <div class="dropdown-menu">
+              <div class="dropdown-item">Option 1</div>
+              <div class="dropdown-item">Option 2</div>
+              <div class="dropdown-item">Option 3</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Open State (Simulated) -->
+        <div class="component-wrapper">
+          <span class="component-label">Open State</span>
+          <div class="dropdown-container" style="margin-bottom: 120px;"> <!-- Margin for visual flow -->
+            <div class="dropdown-trigger open">
+              <span>Option 2</span>
+              <div class="dropdown-chevron"></div>
+            </div>
+            <div class="dropdown-menu open">
+              <div class="dropdown-item">Option 1</div>
+              <div class="dropdown-item selected">Option 2</div>
+              <div class="dropdown-item">Option 3</div>
+              <div class="dropdown-item">Option 4</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Error State -->
+        <div class="component-wrapper">
+          <span class="component-label">Error State</span>
+          <div class="dropdown-container">
+            <div class="dropdown-trigger error" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+              <span>Invalid Selection</span>
+              <div class="dropdown-chevron"></div>
+            </div>
+            <div class="dropdown-menu">
+              <div class="dropdown-item">Option 1</div>
+              <div class="dropdown-item">Option 2</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Success State -->
+        <div class="component-wrapper">
+          <span class="component-label">Success State</span>
+          <div class="dropdown-container">
+            <div class="dropdown-trigger success" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+              <span>Valid Selection</span>
+              <div class="dropdown-chevron"></div>
+            </div>
+            <div class="dropdown-menu">
+              <div class="dropdown-item">Option 1</div>
+              <div class="dropdown-item">Option 2</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <h3>Tooltips</h3>
+      <div class="component-group">
+        <!-- Static Examples -->
+        <div class="component-wrapper">
+          <span class="component-label">Static (With Title)</span>
+          <div class="tooltip-content tooltip-static">
+            <div style="font-size: 16px; margin-bottom: 8px; font-weight: normal;">Popover title</div>
+            They had been at it for two days. Stony silences and rock-hard words. All over the number of throws and the placement of cushions.
+          </div>
+        </div>
+        
+        <div class="component-wrapper">
+          <span class="component-label">Static (Text Only)</span>
+          <div class="tooltip-content tooltip-static">
+            A thirty-year journey from their childlike pillow fights as newlyweds. They shouldn't have enjoyed it so much.
+          </div>
+        </div>
+
+        <!-- Interactive Examples -->
+        <div class="component-wrapper">
+          <span class="component-label">Hover Interaction</span>
+          <div class="tooltip-container">
+            <button class="btn btn-secondary">Hover me (with Title)</button>
+            <div class="tooltip-content">
+              <div style="font-size: 16px; margin-bottom: 8px; font-weight: normal;">Popover title</div>
+              They had been at it for two days. Stony silences and rock-hard words. All over the number of throws and the placement of cushions.
+            </div>
+          </div>
+        </div>
+        
+        <div class="component-wrapper">
+          <span class="component-label">Hover Interaction</span>
+          <div class="tooltip-container">
+            <button class="btn btn-secondary">Hover me (without Title)</button>
+            <div class="tooltip-content">
+              A thirty-year journey from their childlike pillow fights as newlyweds. They shouldn't have enjoyed it so much.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Breadcrumbs</h3>
+      <div class="component-group">
+        <div class="component-wrapper">
+          <span class="component-label">With Current Page</span>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="#" class="breadcrumb-link">This is a link</a>
+            <span class="breadcrumb-separator"></span>
+            <a href="#" class="breadcrumb-link">This is a link</a>
+            <span class="breadcrumb-separator"></span>
+            <a href="#" class="breadcrumb-link">This is a link</a>
+            <span class="breadcrumb-separator"></span>
+            <a href="#" class="breadcrumb-link">This is a link</a>
+            <span class="breadcrumb-separator"></span>
+            <span class="breadcrumb-link breadcrumb-current" aria-current="page">This is a link</span>
+          </nav>
+        </div>
+      </div>
+
+      <h3>Inputs</h3>
+      <div class="component-group">
+        <div class="component-wrapper" style="width: 300px;">
+          <span class="component-label">Default Input</span>
+          <input type="text" class="input-field" placeholder="Search satellites...">
+        </div>
+        <div class="component-wrapper" style="width: 300px;">
+          <span class="component-label">Focused State</span>
+          <input type="text" class="input-field" placeholder="Focused" style="border-color: var(--color-border-focus);">
+        </div>
+      </div>
+
+      <h3>Checkboxes & Radio Buttons</h3>
+      <div class="component-group" style="display: block;">
+        <!-- Checkboxes Row -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem; margin-bottom: 3rem;">
+          <div class="component-wrapper">
+            <span class="component-label">Checkbox Unselected</span>
+            <input type="checkbox" class="checkbox-input">
+          </div>
+          <div class="component-wrapper">
+            <span class="component-label">Checkbox Selected</span>
+            <input type="checkbox" class="checkbox-input" checked>
+          </div>
+          <div class="component-wrapper">
+            <span class="component-label">Checkbox Disabled</span>
+            <input type="checkbox" class="checkbox-input" disabled>
+          </div>
+          <div class="component-wrapper">
+            <span class="component-label">Checkbox Disabled Selected</span>
+            <input type="checkbox" class="checkbox-input" checked disabled>
+          </div>
+        </div>
+        
+        <!-- Radio Buttons Row -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem;">
+          <div class="component-wrapper">
+            <span class="component-label">Radio Unselected</span>
+            <input type="radio" name="radio-demo-1" class="radio-input">
+          </div>
+          <div class="component-wrapper">
+            <span class="component-label">Radio Selected</span>
+            <input type="radio" name="radio-demo-1" class="radio-input" checked>
+          </div>
+          <div class="component-wrapper">
+            <span class="component-label">Radio Disabled</span>
+            <input type="radio" name="radio-demo-2" class="radio-input" disabled>
+          </div>
+          <div class="component-wrapper">
+            <span class="component-label">Radio Disabled Selected</span>
+            <input type="radio" name="radio-demo-2" class="radio-input" checked disabled>
+          </div>
+        </div>
+      </div>
+
+      <h3>Buttons</h3>
+      <div class="component-group">
+        <div class="component-wrapper">
+          <span class="component-label">Primary</span>
+          <button class="btn btn-primary">Primary Action</button>
+        </div>
+        <div class="component-wrapper">
+          <span class="component-label">Secondary</span>
+          <button class="btn btn-secondary">Secondary Action</button>
+        </div>
+        <div class="component-wrapper">
+          <span class="component-label">Tertiary</span>
+          <button class="btn btn-tertiary">Tertiary Action</button>
+        </div>
+        <div class="component-wrapper">
+          <span class="component-label">Text Link</span>
+          <a href="#" class="text-link">Text link</a>
+        </div>
+      </div>
     </section>
     <section id="typography">
       <h2>Typography</h2>
