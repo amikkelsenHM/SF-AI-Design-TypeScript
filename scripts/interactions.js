@@ -92,4 +92,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Icons - click to copy icon name
+  const iconSwatches = document.querySelectorAll('.icon-swatch');
+  iconSwatches.forEach(swatch => {
+    swatch.addEventListener('click', () => {
+      const nameElement = swatch.querySelector('.icon-name');
+      if (nameElement) {
+        const iconName = nameElement.textContent.trim();
+        copyToClipboard(iconName);
+      }
+    });
+  });
 });

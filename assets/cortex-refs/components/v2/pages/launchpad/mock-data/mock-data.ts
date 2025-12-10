@@ -1,0 +1,146 @@
+import { ITelescopeHistoryPerformance } from 'models/interfaces/v2/telescope';
+
+export const mockLatestObservations = [
+  {
+    id: 'usa-495-63341',
+    name: 'USA 495, 63341',
+    nextObservation: 'Observing now',
+    warnings: null,
+    lastObservation: null,
+    elapsedTime: null,
+  },
+  {
+    id: 'qianfan-23',
+    name: 'QIANFAN-23',
+    nextObservation: '16 min',
+    warnings: null,
+    lastObservation: null,
+    elapsedTime: null,
+  },
+  {
+    id: 'qianfan-20',
+    name: 'QIANFAN-20',
+    nextObservation: '5 days',
+    warnings: 4,
+    lastObservation: '07.03.2025, 12:29:17',
+    elapsedTime: null,
+  },
+  {
+    id: 'qianfan-35',
+    name: 'QIANFAN-35',
+    nextObservation: 'Observing now',
+    warnings: 3,
+    lastObservation: '07.03.2025, 12:29:17',
+    elapsedTime: null,
+  },
+  {
+    id: 'qianfan-33',
+    name: 'QIANFAN-33',
+    nextObservation: '16 min',
+    warnings: 2,
+    lastObservation: '07.03.2025, 12:29:17',
+    elapsedTime: null,
+  },
+  {
+    id: 'cosmos-2504',
+    name: 'COSMOS 2504',
+    nextObservation: '5 days',
+    warnings: 44,
+    lastObservation: '07.03.2025, 12:29:17',
+    elapsedTime: null,
+  },
+  {
+    id: 'blue-ghost-1',
+    name: 'BLUE GHOST',
+    nextObservation: null,
+    warnings: 4,
+    lastObservation: '07.03.2025, 12:29:17',
+    elapsedTime: null,
+  },
+  {
+    id: 'andesat-1-agila',
+    name: 'Andesat-1/Agila',
+    nextObservation: null,
+    warnings: 2,
+    lastObservation: '07.03.2025, 12:29:17',
+    elapsedTime: null,
+  },
+  {
+    id: 'usa-495-63341-2',
+    name: 'USA 495, 63341',
+    nextObservation: '8 min',
+    warnings: 2,
+    lastObservation: '07.03.2025, 12:29:17',
+    elapsedTime: '3 days (05.05.25 - 07.05.25)',
+  },
+  {
+    id: 'blue-ghost-2',
+    name: 'BLUE GHOST',
+    nextObservation: '48 min',
+    warnings: 5,
+    lastObservation: '07.03.2025, 12:29:17',
+    elapsedTime: null,
+  },
+  {
+    id: 'andesat-1-agila-2',
+    name: 'Andesat-1/Agila',
+    nextObservation: '6 hrs',
+    warnings: 2,
+    lastObservation: '07.03.2025, 12:29:17',
+    elapsedTime: '3 days (05.05.25 - 07.05.25)',
+  },
+  {
+    id: 'qianfan-20-2',
+    name: 'QIANFAN-20',
+    nextObservation: '5 days',
+    warnings: 2,
+    lastObservation: '07.03.2025, 12:29:17',
+    elapsedTime: '3 days (05.05.25 - 07.05.25)',
+  },
+  {
+    id: 'qianfan-35-2',
+    name: 'QIANFAN-35',
+    nextObservation: '7 hrs',
+    warnings: 2,
+    lastObservation: '07.03.2025, 12:29:17',
+    elapsedTime: '5 days (05.05.25 - 07.05.25)',
+  },
+];
+
+export const mockAllSensorsHistoryPerformance: ITelescopeHistoryPerformance = {
+  payload: {
+    metrics: {
+      'telescope.conditions.available_night': {
+        timestamp: '2025-06-12T00:00:00+00:00',
+        values: [
+          0.26993055555555556, 0.2701736111111111, 0.2694097222222222,
+          0.2692824074074074, 0.26859953703703704, 0.26981481481481484,
+          0.2809490740740741, 0.2747337962962963,
+        ],
+      },
+      'telescope.ops.kpi.unitlization(24h)': {
+        timestamp: '2025-06-12T00:00:00+00:00',
+        values: [
+          0, 0.31655092592592593, 0.2376736111111111, 0.2233449074074074, 0,
+          0.35180555555555554, 0.1757986111111111, 0.29650462962962965,
+        ],
+      },
+      'telescope.ops.kpi.session_count(1h)': {
+        timestamp: '2025-06-12T00:00:00+00:00',
+        values: [
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 264, 308, 330, 308, 374, 308, 308, 330,
+          286, 330, 330, 374, 176, 0, 0, 0, 0, 0, 0, 0, 0, 330, 0, 0, 308, 308,
+          308, 308, 330, 286, 330, 286, 374, 352, 308, 330, 176, 0, 0, 0, 0, 0,
+          0, 0, 0, 0, 0, 0, 286, 308, 286, 330, 286, 330, 308, 330, 352, 330,
+          330, 308, 176, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 330, 308, 286, 330,
+          374, 352, 330, 352, 308, 330, 330, 286, 198, 0, 0, 0, 0, 0, 0, 0, 0,
+          88, 0, 0, 308, 308, 330, 352, 352, 330, 374, 396, 286, 352, 330, 286,
+          176, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 286, 286, 374, 396, 352, 330,
+          352, 308, 308, 352, 352, 330, 132, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          286, 330, 286, 374, 352, 330, 330, 374, 330, 352, 330, 308, 154, 0, 0,
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 286, 330, 308, 396, 66,
+        ],
+      },
+    },
+  },
+};
