@@ -16,6 +16,7 @@ This project serves as the single source of truth for the Spaceflux UI. It provi
 - **`styles/typography.css`**: Defines font faces and typography utility classes.
 - **`styles/components.css`**: Contains styling for core components.
 - **`styles/charts.css`**: Specialized styling for data visualization components.
+- **`styles/utilities.css`**: Utility classes for layout, spacing, and sizing.
 - **`index.html`**: Visual showcase and interactive documentation of the system.
 - **`navigation-preview.html`**: Full-page demo of the sidenav component with documentation.
 - **`DESIGN_SYSTEM_RULES.md`**: Guidelines for generating and extending UI code.
@@ -35,11 +36,12 @@ To use the design system in your pages, include the CSS files and favicon in the
 <link rel="stylesheet" href="styles/typography.css">
 <link rel="stylesheet" href="styles/components.css">
 <link rel="stylesheet" href="styles/charts.css">
+<link rel="stylesheet" href="styles/utilities.css">
 ```
 
 ### Favicon
 
-The Spaceflux favicon is the official brand icon and should be included in all projects using this design system. The favicon files are located in the `assets/` directory:
+The Spaceflux favicon is the official brand icon and should be included in all projects using this design system. The favicon files are located in the `assets/favicons/` directory:
 - `favicon.png` (32x32) - Standard favicon
 - `favicon-192.png` (192x192) - High-resolution favicon for modern browsers
 - `apple-touch-icon.png` (180x180) - Apple touch icon for iOS devices
@@ -78,3 +80,4 @@ Components are organized by complexity from most complex (Organisms) to simplest
 - **Inputs** - Text input fields
 - **Checkboxes & Radio Buttons** - Selection controls
 - **Buttons** - Primary, secondary, and tertiary action buttons
+ry action buttons
