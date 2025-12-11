@@ -196,6 +196,171 @@
 :root {
   --line-height: 120%;
 
+  /* --- ALIGNED TOKENS FROM VANILLA SYSTEM --- */
+  
+  /* Brand Colors - Primary */
+  --color-primary-100: #e9e0fb;
+  --color-primary-200: #c9b1f4;
+  --color-primary-300: #ac80ed;
+  --color-primary-400: #924ae4;
+  --color-primary-500: #6b29ae;
+  --color-primary-600: #41166d;
+  --color-primary-700: #1a0531;
+
+  /* Brand Colors - Secondary */
+  --color-secondary-100: #ffecf2;
+  --color-secondary-200: #ffbed6;
+  --color-secondary-300: #ff7eb6;
+  --color-secondary-400: #fb0098;
+  --color-secondary-500: #ba0070;
+  --color-secondary-600: #7d0049;
+  --color-secondary-700: #450026;
+
+  /* Neutral Colors - Grey */
+  --color-grey-100: #e5e4e6;
+  --color-grey-200: #bdbcc0;
+  --color-grey-300: #97959c;
+  --color-grey-400: #737079;
+  --color-grey-500: #504e55;
+  --color-grey-600: #2f2e33;
+  --color-grey-700: #111113;
+  --color-grey-900: #120B0D;
+
+  /* Tertiary */
+  --color-tertiary-100: #fdcfd0;
+  --color-tertiary-200: #fb9699;
+  --color-tertiary-300: #fa4d56;
+  --color-tertiary-400: #ce1628;
+  --color-tertiary-500: #8f0c18;
+  --color-tertiary-600: #54040a;
+  --color-tertiary-700: #2b0103;
+
+  /* Quaternary */
+  --color-quaternary-100: #ffd9d9;
+  --color-quaternary-200: #ffa0a0;
+  --color-quaternary-300: #ff5b5b;
+  --color-quaternary-400: #e10000;
+  --color-quaternary-500: #9f0000;
+  --color-quaternary-600: #620000;
+  --color-quaternary-700: #2d0000;
+
+  /* Quinary */
+  --color-quinary-100: #76ff9a;
+  --color-quinary-200: #00d961;
+  --color-quinary-300: #00ad4c;
+  --color-quinary-400: #008338;
+  --color-quinary-500: #005c25;
+  --color-quinary-600: #003713;
+  --color-quinary-700: #001504;
+
+  /* Senary */
+  --color-senary-100: #ccff6a;
+  --color-senary-200: #a2d700;
+  --color-senary-300: #82ad00;
+  --color-senary-400: #638500;
+  --color-senary-500: #465f00;
+  --color-senary-600: #2b3c00;
+  --color-senary-700: #121b00;
+
+  /* Septenary */
+  --color-septenary-100: #ceff0c;
+  --color-septenary-200: #abd400;
+  --color-septenary-300: #89ab00;
+  --color-septenary-400: #688300;
+  --color-septenary-500: #4a5d00;
+  --color-septenary-600: #2d3a00;
+  --color-septenary-700: #131a00;
+
+  /* Octonary */
+  --color-octonary-100: #b1fffb;
+  --color-octonary-200: #1eeae4;
+  --color-octonary-300: #16bfba;
+  --color-octonary-400: #0f9692;
+  --color-octonary-500: #086e6b;
+  --color-octonary-600: #034947;
+  --color-octonary-700: #012725;
+  
+  /* Brand Named Colors - Aliases for Vanilla Compatibility */
+  --color-brand-medium-orchid: var(--brand-medium-orchid);
+  --color-brand-deep-purple: var(--brand-deep-purple);
+  --color-brand-china-pink: var(--brand-china-pink);
+  --color-brand-grey-purple: #674A86;
+  --color-brand-han-blue: var(--brand-han-blue);
+  --color-brand-bright-blue: #1686E8;
+
+  /* Typography - Font Families (Vanilla Compat) */
+  --font-family-ibm-plex-sans: "IBM Plex Sans", sans-serif;
+  --font-family-nb-architekt: "NB Architekt Std", sans-serif;
+  --font-family-helvetica: "Helvetica", sans-serif;
+
+  /* Typography - Font Weights (Vanilla Compat) */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Typography - Font Sizes (Vanilla Compat) */
+  --font-size-8: 8px;
+  --font-size-10: 10px;
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-28: 28px;
+  --font-size-35: 35px;
+  --font-size-36: 36px;
+  --font-size-55: 55px;
+
+  /* Typography - Line Heights (Vanilla Compat) */
+  --line-height-10: 10px;
+  --line-height-12: 12px;
+  --line-height-13: 13px;
+  --line-height-14: 14px;
+  --line-height-17: 17px;
+  --line-height-18: 18px;
+  --line-height-22: 22px;
+  --line-height-25: 25px;
+  --line-height-34: 34px;
+  --line-height-40: 40px;
+  --line-height-42: 42px;
+  --line-height-55: 55px;
+
+  /* Typography - Letter Spacing (Vanilla Compat) */
+  --letter-spacing-neg-5: -0.2px;
+  --letter-spacing-0: 0px;
+
+  /* UI Colors - Vanilla Compatibility Aliases */
+  --color-surface-dark: var(--background);
+  --color-surface-dark-contrast: var(--background-contrast);
+  --color-surface-dark-progress: var(--background-progress);
+  --color-surface-light: #FFFFFF;
+  
+  --color-on-surface-dark: var(--foreground);
+  --color-on-surface-light: #222222;
+  --color-on-surface-dark-contrast: var(--foreground-contrast);
+  --color-on-surface-dark-subtle: var(--foreground-subtle);
+  --color-on-surface-dark-disabled: var(--foreground-disabled);
+
+  --color-border-on-dark: var(--border-on-dark, #EEEEEE);
+  --color-border-on-dark-contrast: var(--border-on-dark-contrast, #36274A);
+  --color-border-on-dark-subtle: var(--border-dark); /* Mapping to existing border dark */
+  
+  /* Data Visualization - Vanilla Compatibility */
+  --color-dataviz-1: var(--categorical-1);
+  --color-dataviz-2: var(--categorical-2);
+  --color-dataviz-3: var(--categorical-3);
+  --color-dataviz-4: var(--categorical-4);
+  --color-dataviz-5: var(--categorical-5);
+  --color-dataviz-6: var(--categorical-6);
+  --color-dataviz-7: var(--categorical-7);
+  --color-dataviz-8: var(--categorical-8);
+  --color-dataviz-9: var(--categorical-9);
+  --color-dataviz-10: var(--categorical-10);
+  --color-dataviz-11: var(--categorical-11);
+  --color-dataviz-12: var(--categorical-12);
+  --color-dataviz-13: var(--categorical-13);
+  --color-dataviz-14: var(--categorical-14);
+  --color-dataviz-15: var(--categorical-15);
+
   /* TODO: not all colors for light theme are available */
   /* Brand colors */
   --brand-medium-orchid: #cf8bff;

@@ -1,86 +1,93 @@
-# Design System Rules
+# Spaceflux Design System Rules
 
-This document serves as the instruction set for generating UI code for the Spaceflux project. All future AI sessions must adhere to these rules to ensure consistency.
+This document serves as the **primary instruction set** for generating UI code for the Spaceflux project.
+**CRITICAL:** You must determine the **Target Mode** (Vanilla or React) before generating any code.
 
-## 1. Source of Truth
-*   **Styles:** The design system is implemented in standard CSS variables and utility classes.
-    *   `styles/variables.css`: Defines all colors, typography, and primitive tokens.
-    *   `styles/typography.css`: Defines font faces and typography utility classes.
-    *   `styles/components.css`: Defines the styling for core components (buttons, inputs, tables, pickers).
-    *   `styles/charts.css`: Defines styling for charts and data visualization.
-*   **Reference:** The file `index.html` contains the canonical HTML markup for all supported components.
-    *   **RULE:** Always check `index.html` for the correct DOM structure and class names before generating new UI components.
+---
 
-## 2. Import Structure
-When creating new HTML pages or components, always include the CSS files in the following order:
-
-```html
-<link rel="stylesheet" href="styles/variables.css">
-<link rel="stylesheet" href="styles/typography.css">
-<link rel="stylesheet" href="styles/components.css">
-<link rel="stylesheet" href="styles/charts.css">
-```
-
-## 3. Naming Conventions & Usage
-
-### Typography
-Use the utility classes defined in `styles/typography.css` instead of raw font properties.
-*   **Headings:** `.text-display-large`, `.text-heading-large`, `.text-heading-medium`
-*   **Body:** `.text-body-large`, `.text-body-small`
-*   **Labels/Overlines:** `.text-overline-large`, `.text-label`
-*   **Links:** `.text-link-large`, `.text-link-small`
+## 1. Shared Source of Truth (Tokens)
+Regardless of the mode, **ALWAYS** use the following Design Tokens. Never hardcode hex values or fonts.
 
 ### Colors
-Use CSS variables for all colors. Do not hardcode hex values.
-*   **Surfaces:** `var(--color-surface-dark)`, `var(--color-surface-dark-progress)`
+*   **Primary:** `var(--color-brand-medium-orchid)`, `var(--color-brand-deep-purple)`
+*   **Surfaces:** `var(--color-surface-dark)`, `var(--color-surface-dark-contrast)`
 *   **Text:** `var(--color-on-surface-dark)`, `var(--color-on-surface-light)`
-*   **Primary Brand:** `var(--color-primary-500)`
 *   **Borders:** `var(--color-border-dark)`, `var(--color-border-focus)`
+*   **DataViz:** `var(--color-dataviz-1)` through `var(--color-dataviz-15)`
 
-### Components
-*   **Buttons:** Use `.btn` combined with `.btn-primary`, `.btn-secondary`, or `.btn-tertiary`.
-*   **Inputs:** Use `.input-field` for text inputs. Wrap date picker inputs in `.date-picker-input-wrapper`.
-*   **Sidenav:**
-    *   Container: `.sidenav` with state classes `.sidenav-wide` (252px) or `.sidenav-collapsed` (72px)
-    *   Logo section: `.sidenav-logo` containing `.sidenav-logo-full` (wide state) and `.sidenav-logo-icon` (collapsed state)
-    *   Navigation: `.sidenav-nav` > `.sidenav-item` (+ `.sidenav-item-active` for active state)
-    *   Item structure: `.sidenav-icon` + `.sidenav-label`
-    *   Toggle button: `.sidenav-toggle` (positioned absolutely on right edge)
-    *   Active state: 4px left border in `var(--color-brand-medium-orchid)` + background `var(--color-surface-dark-contrast)`
-*   **Data Tables (V2):**
-    *   Container: `.table-container`
-    *   Table: `.table-v2`
-    *   Rows: Standard `thead > tr > th` and `tbody > tr > td`
-    *   Badges: `.badge` with variants `.badge-success`, `.badge-warning`, `.badge-error`, `.badge-processing`.
-*   **Dropdowns:**
-    *   Structure: `.dropdown-container` > `.dropdown-trigger` (+ `.open`, `.error`, `.success`) > `.dropdown-menu` (+ `.open`) > `.dropdown-item` (+ `.selected`).
-*   **Date Picker:** Follow the structure: `.date-picker` > `.date-picker-header` > `.date-picker-inputs` > `.date-picker-controls` > `.date-picker-grid`.
-*   **Charts:**
-    *   **Foundational Module:** `.chart-base` > `.chart-header` + `.chart-layout-container` > `.chart-layout` (containing `.chart-y-label-container` + `.chart-plot-area`) + `.chart-x-axis-container`.
-    *   **Grid System:** `.chart-plot-area` contains `.chart-grid-line` (horizontal) and `.chart-grid-vertical`.
-    *   **Bar Chart (Bi-directional):** `.bar-chart-container.bi-directional` > `.bar-group` > `.bar-value` (+ `.positive`/`.negative`, `.bar-1`/`.bar-2`/`.bar-3`).
-    *   **Scatter Chart:** `.chart-plot-area` contains `.scatter-point` (+ sizes `.size-xs` to `.size-lg`, colors `.color-1` to `.color-3`).
-    *   **Multi-Line Chart:** `.chart-plot-area` contains `<svg class="line-chart-svg">` with `<path class="line-path">` (+ `.color-1` to `.color-3`).
+### Typography
+*   **Font Family:** `var(--font-family-ibm-plex-sans)`, `var(--font-family-nb-architekt)`
+*   **Weights:** `var(--font-weight-regular)`, `var(--font-weight-medium)`, `var(--font-weight-bold)`
 
-## 4. Extension Rules
-*   If a new component is needed that does not exist in `index.html`, try to compose it using existing primitives (CSS variables).
-*   Do not introduce new hex values. Use the provided color palette variables.
-*   Maintain the "Dark Mode" aesthetic as the default.
+---
 
-## 5. Component Hierarchy
-Components are organized by complexity (Organisms → Molecules → Atoms):
+## 2. Operating Modes
+
+### MODE A: Vanilla (Prototype)
+**Use when:** Creating single-file prototypes, simple HTML/CSS demos, or when the user explicitly requests "plain HTML/CSS".
+
+*   **File Structure:**
+    ```html
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/charts.css">
+    <link rel="stylesheet" href="styles/utilities.css"> <!-- New Layout Utilities -->
+    ```
+*   **Component Usage:**
+    *   **Buttons:** `<button class="btn btn-primary">`
+    *   **Inputs:** `<input class="input-field">`
+    *   **Tables:** `.table-v2`, `.badge`
+    *   **Cards:** Use `div` with `class="bg-surface rounded-lg p-6 border"` (from utilities).
+*   **Constraint:** Do NOT use Tailwind classes (e.g., `flex-row`, `p-4`) unless you add the definitions to a `<style>` block. **Exception:** You MAY use classes defined in `styles/utilities.css`.
+
+### MODE B: React (Production/Next-Gen)
+**Use when:** Building production features, using TypeScript, or when the user requests "Modern", "React", or "Tailwind".
+
+*   **Reference Path:** `assets/cortex-refs/`
+*   **Styling Engine:** Tailwind CSS + Radix UI
+*   **Component Usage:**
+    *   **Import:** `import { Button } from "@/components/ui/button"`
+    *   **Syntax:** `<Button variant="primary" size="lg">Click Me</Button>`
+*   **Available Components:**
+    *   `Button`, `Input`, `Card`, `Select`, `Table`, `Dialog`, `Sheet`, `Tabs`
+    *   Refer to `assets/cortex-refs/component-signatures.ts` for exact prop definitions.
+*   **Constraint:** Do NOT use vanilla CSS classes (e.g., `.btn-primary`) inside React components. Use Tailwind utility classes or the component's `variant` prop.
+
+---
+
+## 3. Rules for AI Generation
+
+1.  **Check the Context:** Look at the existing files.
+    *   If you see `.html` files or `styles/*.css`, default to **Mode A (Vanilla)**.
+    *   If you see `.tsx` files, `package.json`, or `postcss.config.js`, default to **Mode B (React)**.
+2.  **Strict Separation:** Never mix the two modes in the same file.
+    *   ❌ Don't use `<Button>` components in `index.html`.
+    *   ❌ Don't use `class="btn btn-primary"` in a React file.
+3.  **Variable Parity:** Both systems now share the exact same CSS variable names in `:root`. You can safely use `var(--color-brand-medium-orchid)` in Tailwind via arbitrary values `bg-[var(--color-brand-medium-orchid)]` or configured theme colors `bg-brand-medium-orchid`.
+
+---
+
+## 4. Component Hierarchy & Patterns
+
 *   **Organisms:** Charts, Data Tables
 *   **Complex Molecules:** Date Picker, Dropdowns
 *   **Simple Molecules:** Sidenav, Tooltips, Breadcrumbs
 *   **Atoms:** Inputs, Checkboxes, Radio Buttons, Buttons
 
-## 6. Navigation Component
-The sidenav component (`navigation-preview.html`) demonstrates full-page implementation:
-*   Fixed positioning on left side
-*   Smooth transitions between wide (252px) and collapsed (72px) states
-*   Logo switches between full wordmark and circular icon
-*   Labels fade out in collapsed state with `overflow: hidden` clipping
-*   Toggle button positioned absolutely at right edge (-12px offset)
-*   Active state uses 4px left border and darker background
-*   Interactive demo available in `index.html` under Sidenav section
+### Key Component Patterns (Vanilla)
+*   **Sidenav:** `.sidenav` (Container) > `.sidenav-logo` + `.sidenav-nav` > `.sidenav-item`
+*   **Data Tables:** `.table-container` > `.table-v2`
+*   **Charts:** `.chart-base` > `.chart-layout`
 
+### Key Component Patterns (React)
+*   **Card:**
+    ```tsx
+    <Card>
+      <CardHeader><CardTitle>Title</CardTitle></CardHeader>
+      <CardContent>...</CardContent>
+    </Card>
+    ```
+*   **Button:** `<Button variant="primary">Action</Button>`
+
+---
