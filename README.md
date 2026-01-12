@@ -1,83 +1,221 @@
 # Spaceflux Design System
 
-A comprehensive design system for the Spaceflux project, featuring dark mode aesthetics, standardized typography, color palettes, and reusable UI components.
+A React + TypeScript component library featuring dark mode aesthetics, design tokens, and reusable UI components with MCP server integration for AI coding assistants.
 
-## Overview
+## Prerequisites
 
-This project serves as the single source of truth for the Spaceflux UI. It provides:
-- **CSS Variables:** Centralized definition of colors, typography, and spacing.
-- **Typography:** Utility classes for headings, body text, and labels.
-- **Components:** Core UI elements like buttons, inputs, date pickers, data tables, and navigation.
-- **Navigation:** Collapsible sidenav component with interactive states.
+- **Node.js** 18.0.0 or higher
+- **pnpm** 8.0.0 or higher (`npm install -g pnpm`)
 
-## File Structure
+## Quick Start
 
-- **`styles/variables.css`**: Defines all design tokens (colors, font families, spacing).
-- **`styles/typography.css`**: Defines font faces and typography utility classes.
-- **`styles/components.css`**: Contains styling for core components.
-- **`styles/charts.css`**: Specialized styling for data visualization components.
-- **`styles/utilities.css`**: Utility classes for layout, spacing, and sizing.
-- **`index.html`**: Visual showcase and interactive documentation of the system.
-- **`navigation-preview.html`**: Full-page demo of the sidenav component with documentation.
-- **`DESIGN_SYSTEM_RULES.md`**: Guidelines for generating and extending UI code.
+### 1. Clone and Build
 
-## Usage
-
-To use the design system in your pages, include the CSS files and favicon in the following order:
-
-```html
-<!-- Favicon (Standard for all Spaceflux projects) -->
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-
-<!-- Stylesheets -->
-<link rel="stylesheet" href="styles/variables.css">
-<link rel="stylesheet" href="styles/typography.css">
-<link rel="stylesheet" href="styles/components.css">
-<link rel="stylesheet" href="styles/charts.css">
-<link rel="stylesheet" href="styles/utilities.css">
+```bash
+git clone <repository-url> spaceflux-design-system
+cd spaceflux-design-system
+pnpm install
+pnpm build
 ```
 
-### Favicon
+### 2. Explore Components
 
-The Spaceflux favicon is the official brand icon and should be included in all projects using this design system. The favicon files are located in the `assets/favicons/` directory:
-- `favicon.png` (32x32) - Standard favicon
-- `favicon-192.png` (192x192) - High-resolution favicon for modern browsers
-- `apple-touch-icon.png` (180x180) - Apple touch icon for iOS devices
+```bash
+pnpm storybook
+```
 
-## Guidelines
+Open http://localhost:6006 to browse all components.
 
-Please refer to `DESIGN_SYSTEM_RULES.md` for detailed instructions on:
-- Naming conventions
-- Extension rules
-- Correct usage of utility classes and variables
+### 3. Use in Your Project
 
-## Development
+**Option A: Link locally**
+```bash
+# In spaceflux directory
+cd packages/ui && pnpm link --global
 
-Open `index.html` in a browser to view the visual showcase of the design system, including color palettes, typography examples, and interactive components.
+# In your project
+pnpm link --global @spaceflux/ui
+```
 
-For a full-page demonstration of the sidenav component, open `navigation-preview.html`.
+**Option B: Install from path**
+```json
+{
+  "dependencies": {
+    "@spaceflux/ui": "file:../path-to-spaceflux/packages/ui"
+  }
+}
+```
 
-## Component Hierarchy
+### 4. Import and Use
 
-Components are organized by complexity from most complex (Organisms) to simplest (Atoms):
+```tsx
+// Import styles once in your app entry
+import '@spaceflux/ui/styles.css';
 
-### Organisms (Most Complex)
-- **Charts & Data Visualization** - Multi-part data visualization components
-- **Data Tables** - Complex tabular data with sorting, pagination, and badges
+// Import and use components
+import { Button, Input, Sidenav, Icon } from '@spaceflux/ui';
 
-### Complex Molecules
-- **Date Picker** - Multi-part date selection interface
-- **Dropdowns & Selects** - Interactive selection components with states
+function App() {
+  return <Button variant="primary">Click me</Button>;
+}
+```
 
-### Simple Molecules
-- **Sidenav** - Collapsible navigation component (252px wide / 72px collapsed)
-- **Tooltips** - Contextual information overlays
-- **Breadcrumbs** - Navigation path indicators
+---
 
-### Atoms (Simplest)
-- **Inputs** - Text input fields
-- **Checkboxes & Radio Buttons** - Selection controls
-- **Buttons** - Primary, secondary, and tertiary action buttons
-ry action buttons
+## Monorepo Structure
+
+```
+├── packages/ui/          # @spaceflux/ui component library
+├── apps/docs/            # Storybook documentation
+├── apps/mcp-server/      # MCP server for AI integration
+├── assets/               # Fonts, logos, icons
+└── _legacy/              # Original HTML/CSS reference
+```
+
+## Development Commands
+
+| Command | Description |
+|---------|-------------|
+| `pnpm install` | Install dependencies |
+| `pnpm build` | Build all packages |
+| `pnpm storybook` | Start Storybook (port 6006) |
+| `pnpm mcp:http` | Start MCP HTTP server (port 3456) |
+
+---
+
+## Components
+
+### Atoms
+| Component | Props | Example |
+|-----------|-------|-------|
+| `Button` | `variant: 'primary' \| 'secondary' \| 'tertiary'` | `<Button variant="primary">Click</Button>` |
+| `Input` | `error?: boolean`, `placeholder?: string` | `<Input placeholder="Enter text..." />` |
+| `Checkbox` | `label?: string`, `checked?: boolean` | `<Checkbox label="Accept terms" />` |
+| `RadioButton` | `label?: string`, `name: string` | `<RadioButton label="Option A" name="opts" />` |
+| `Badge` | `variant: 'success' \| 'warning' \| 'error'` | `<Badge variant="success">Active</Badge>` |
+| `Icon` | `name: IconName`, `size?: number` | `<Icon name="settings" size={24} />` |
+
+### Typography
+| Component | Props | Example |
+|-----------|-------|-------|
+| `Heading` | `variant: 'display-large' \| 'heading-large' \| 'heading-medium'` | `<Heading variant="heading-large">Title</Heading>` |
+| `Text` | `variant: 'body-large' \| 'body-small' \| 'label'` | `<Text variant="body-small">Content</Text>` |
+
+### Molecules
+| Component | Props | Example |
+|-----------|-------|-------|
+| `Dropdown` | `options: DropdownOption[]`, `value?: string` | `<Dropdown options={opts} onChange={setVal} />` |
+| `Tooltip` | `content: ReactNode` | `<Tooltip content="Help"><Button>?</Button></Tooltip>` |
+| `Breadcrumb` | `items: BreadcrumbItem[]` | `<Breadcrumb items={[{label:'Home'}]} />` |
+| `DatePicker` | `value?: Date`, `onChange?: (d) => void` | `<DatePicker value={date} onChange={setDate} />` |
+
+### Organisms
+| Component | Props | Example |
+|-----------|-------|-------|
+| `Table` | `columns: TableColumn[]`, `data: T[]` | `<Table columns={cols} data={rows} />` |
+| `Sidenav` | `items: SidenavItem[]`, `activeId?: string` | `<Sidenav items={navItems} activeId="home" />` |
+
+---
+
+## Design Tokens
+
+### CSS Variables
+| Token | Variable | Value |
+|-------|----------|-------|
+| Background | `--color-surface-dark` | #100919 |
+| Brand Primary | `--color-brand-medium-orchid` | #CF8BFF |
+| Text | `--color-on-surface-dark` | #EEEEEE |
+| Border | `--color-border-on-dark-subtle` | #3D3D3D |
+
+### TypeScript Access
+```tsx
+import { colors, typography, tokens } from '@spaceflux/ui';
+
+colors.brand.mediumOrchid  // '#CF8BFF'
+colors.surface.dark        // '#100919'
+```
+
+---
+
+## MCP Server
+
+The MCP server enables AI coding assistants to query the design system.
+
+### Test the Server
+
+```bash
+# Start HTTP server
+pnpm mcp:http
+
+# Test endpoints
+curl http://localhost:3456/tools/list_components
+curl "http://localhost:3456/tools/get_component_schema?name=Button"
+```
+
+### Resources & Tools
+
+| Resource/Tool | Description |
+|---------------|-------------|
+| `spaceflux://rules` | Design system rules |
+| `spaceflux://tokens` | Design tokens JSON |
+| `list_components` | List all available components |
+| `get_component_schema` | Get component props and examples |
+| `validate_code_snippet` | Validate code against rules |
+
+For AI IDE integration (Windsurf/Cursor), see **[IDE_SETUP.md](./IDE_SETUP.md)**.
+
+---
+
+## Example: New Project
+
+```bash
+pnpm create vite my-app --template react-ts
+cd my-app
+pnpm add @spaceflux/ui@file:../path-to-spaceflux/packages/ui
+```
+
+```tsx
+// src/main.tsx
+import '@spaceflux/ui/styles.css';
+import App from './App';
+// ...
+
+// src/App.tsx
+import { Sidenav, Icon, Heading, Button, Input } from '@spaceflux/ui';
+
+const navItems = [
+  { id: 'dashboard', label: 'Dashboard', icon: <Icon name="grid_on" /> },
+  { id: 'settings', label: 'Settings', icon: <Icon name="settings" /> },
+];
+
+function App() {
+  return (
+    <div style={{ display: 'flex', minHeight: '100vh', background: '#100919' }}>
+      <Sidenav items={navItems} activeId="dashboard" />
+      <main style={{ marginLeft: 252, padding: 32 }}>
+        <Heading variant="heading-large">Welcome</Heading>
+        <Input placeholder="Search..." />
+        <Button variant="primary">Submit</Button>
+      </main>
+    </div>
+  );
+}
+```
+
+---
+
+## Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| Styles not loading | Add `import '@spaceflux/ui/styles.css'` to app entry |
+| Components not found | Rebuild: `pnpm --filter @spaceflux/ui build` |
+| MCP not connecting | Check server: `curl http://localhost:3456/health` |
+
+---
+
+## Documentation
+
+- **[Storybook](http://localhost:6006)** — Interactive component docs
+- **[DESIGN_SYSTEM_RULES.md](./DESIGN_SYSTEM_RULES.md)** — AI implementation guidelines
+- **[IDE_SETUP.md](./IDE_SETUP.md)** — Windsurf/Cursor MCP configuration

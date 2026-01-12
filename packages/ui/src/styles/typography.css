@@ -1,0 +1,166 @@
+@import './variables.css';
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("../assets/fonts/IBMPlexSans-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NB Architekt Std";
+  src: url("../assets/fonts/NBArchitektStd-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* Typography Utilities */
+
+.text-display-large {
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-55);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-55);
+  letter-spacing: var(--letter-spacing-0);
+  color: var(--color-on-surface-dark);
+}
+
+.text-heading-large {
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-35);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-42);
+  color: var(--color-on-surface-dark);
+}
+
+.text-heading-medium {
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-28);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-34);
+  color: var(--color-on-surface-dark);
+}
+
+.text-overline-large {
+  font-family: var(--font-family-nb-architekt);
+  font-size: var(--font-size-36);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-40);
+  letter-spacing: var(--letter-spacing-neg-5);
+  text-transform: uppercase;
+  color: var(--color-on-surface-dark);
+}
+
+.text-overline-medium {
+  font-family: var(--font-family-nb-architekt);
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-18);
+  text-transform: uppercase;
+  color: var(--color-on-surface-dark);
+}
+
+.text-body-large {
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-25);
+  color: var(--color-on-surface-dark);
+}
+
+.text-body-small {
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-17);
+  color: var(--color-on-surface-dark);
+}
+
+.text-body-bold-large {
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-22);
+  color: var(--color-on-surface-dark);
+}
+
+.text-body-bold-small {
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-12);
+  color: var(--color-on-surface-dark);
+}
+
+.text-cta-large {
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-22);
+  color: var(--color-on-surface-dark);
+}
+
+.text-cta-small {
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-17);
+  color: var(--color-on-surface-dark);
+}
+
+.text-link-large {
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-22);
+  color: var(--color-border-focus); /* Assuming links use the focus color by default or context */
+  text-decoration: underline;
+}
+
+.text-link-small {
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-14);
+  text-decoration: underline;
+  color: var(--color-border-focus);
+}
+
+.text-footnote {
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-8);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-10);
+  color: var(--color-on-surface-dark);
+}
+
+.text-helper {
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-10);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-13);
+  color: var(--color-on-surface-dark);
+}
+
+.text-label {
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-10);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-14);
+  color: var(--color-on-surface-dark);
+}
+
+.text-label-bold {
+  font-family: var(--font-family-ibm-plex-sans);
+  font-size: var(--font-size-10);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-12);
+  color: var(--color-on-surface-dark);
+}
+
+.text-on-brand-primary {
+  font-family: var(--font-family-helvetica);
+  font-size: var(--font-size-10);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.38;
+}
